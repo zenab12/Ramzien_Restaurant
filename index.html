@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+
+<!--[if lte 8]><html class="pre-ie9" lang="en"><![endif]-->
+
+<!--[if gte IE 9]><!-->
+<html lang="en"><!--<![endif]-->
+
+<head>
+
+    <title>Ramzien Restaurant</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Ramzien Restaurnt Website" />
+    <meta name="keywords" content="Ramzien , Restaurant , Cafee">
+    <meta name="author" content="Muhammad Ramadan, Zien Muhammad">
+    <!-- <base href="./assets/imgs/"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3
+/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="./assets/imgs/logo-2.png">
+    <style>
+        * {
+            box-sizing: border-box !important;
+        }
+
+        *:focus {
+            box-shadow: none !important;
+        }
+
+
+
+        .logo img {
+            width: 90px
+        }
+
+        .burger-menu span,
+        .navbar-details span {
+            width: 30px;
+            height: 1px;
+            display: block;
+            margin: 4px auto;
+            background-color: aliceblue;
+        }
+
+        .burger-menu span:first-of-type {
+            margin-top: 10px
+        }
+
+        .burger-menu span:first-of-type,
+        .burger-menu span:last-of-type {
+            width: 20px;
+            height: 1px;
+        }
+
+        .burger-menu span:last-of-type {
+            margin-bottom: 0px;
+        }
+
+        a {
+
+            color: lightgray !important;
+        }
+
+        ul.contact li>span:first-child {
+            line-height: 30px;
+            display: table-cell;
+            margin-right: 15px;
+            float: left;
+            font-weight: 400;
+            font-size: 16px;
+            margin-top: 3px;
+            color: #c59d5f
+        }
+
+
+
+        button.btn-close {
+            font-size: 30px;
+        }
+
+        .dishes .modal-dialog {
+            /* margin: 0 !important */
+            max-width: 100% !important;
+
+        }
+
+        .dishes .modal-content {
+            background-color: black !important;
+            color: #fff !important
+        }
+
+        body,
+        html {
+            height: 100% !important;
+        }
+
+
+        #headerFoodCarousel {
+            height: 700px !important;
+            box-sizing: border-box !important;
+            background-image: url("./assets/imgs/Bakgrounds/res-bg-image3.jpg") !important;
+            background-size: cover;
+        }
+
+        #headerFoodCarousel .carousel-indicators button {
+            width: 20px;
+            border-radius: 25px;
+            background-color: #c59d5f !important;
+            background-clip: unset !important;
+            opacity: 1 !important;
+            position: relative;
+        }
+
+        #headerFoodCarousel .carousel-indicators button::after {
+            position: absolute;
+            z-index: 10000;
+            content: "";
+            color: #fff;
+            background-color: #fff;
+            width: 10px;
+            border-radius: 100%;
+            top: -5px;
+            left: 5px;
+            display: block;
+            height: 10px;
+        }
+
+        #headerFoodCarousel .carousel-indicators button.active {
+            background-color: #fff !important;
+        }
+
+        #headerFoodCarousel .carousel-indicators button.active::after {
+
+            background-color: #c59d5f;
+        }
+
+        #headerFoodCarousel button img {
+            width: 200px !important
+        }
+
+        #headerFoodCarousel .carousel-indicators {
+            top: 35% !important;
+            position: relative !important;
+            margin-left: 0 !important;
+            transform: rotate(90deg);
+        }
+
+        #headerFoodCarousel .container,
+        #headerFoodCarousel .container>div,
+        #headerFoodCarousel .container-fluid>div {
+            position: relative !important;
+            color: #fff !important;
+        }
+
+        p,
+        h1,
+        h2,
+        h3 {
+            color: #fff !important;
+            text-align: left !important;
+            margin-bottom: 20px;
+        }
+
+        #headerFoodCarousel div.image {
+            margin-left: 5%;
+            margin-top: 0px;
+        }
+
+        #headerFoodCarousel .container-fluid {
+            position: relative !important;
+
+        }
+
+
+        #headerFoodCarousel .carousel-caption {
+            left: 0 !important;
+            right: 0 !important;
+            top: 50px;
+            height: 100%;
+            position: relative !important;
+
+        }
+
+        .carousel-inner {
+            height: 100%
+        }
+
+        #headerFoodCarousel .carousel-caption img {
+            width: 100%
+        }
+
+        #headerFoodCarousel .container-fluid .controls {
+            height: 100px;
+            position: absolute !important;
+            bottom: 30px !important;
+            left: 0px
+        }
+
+        #headerFoodCarousel .carousel-indicators {
+            position: relative !important;
+            margin-left: 0 !important;
+            transform: rotate(90deg);
+            top: 250px !important;
+        }
+
+        #headerFoodCarousel .carousel-control-next,
+        #headerFoodCarousel .carousel-control-prev {
+            width: 45% !important;
+            border-radius: 60px !important;
+            border: 1px solid #c59d5f !important;
+            background-color: #000 !important;
+            text-align: left !important;
+            color: #c59d5f !important;
+            /* padding-top: 15px !important; */
+        }
+
+        #headerFoodCarousel div.image {
+            position: absolute;
+            top: 20px;
+            z-index: 100;
+            right: -20px
+        }
+
+        div.image img {
+            width: 100%
+        }
+
+        @media(max-width:767px) {
+            header {
+                height: auto !important;
+            }
+
+            #headerFoodCarousel .carousel-caption {
+                left: 0 !important;
+                right: 0 !important;
+                top: 5px !important;
+                position: relative !important;
+
+            }
+
+            #headerFoodCarousel .container-fluid .controls {
+                height: 50px;
+                color: #fff !important;
+                bottom: 0px !important;
+
+
+            }
+
+            #headerFoodCarousel .carousel-control-next,
+            #headerFoodCarousel .carousel-control-prev {
+                width: 20% !important;
+                background-color: transparent !important;
+                border: 1px solid transparent !important;
+
+            }
+
+            #headerFoodCarousel div.image {
+
+                top: 330px;
+            }
+
+            div.image img {
+                width: 75%
+            }
+        }
+
+        header .main-content {
+            height: 100%
+        }
+
+        @media(min-width:768px) and (max-width:992px) {
+
+            #headerFoodCarousel div.image {
+
+                top: 330px;
+                right: -40px;
+
+            }
+
+            #headerFoodCarousel .container-fluid .controls {
+                height: 60px;
+                position: absolute !important;
+                bottom: 80px !important;
+                left: 40px
+            }
+
+            #headerFoodCarousel .carousel-control-next,
+            #headerFoodCarousel .carousel-control-prev {
+                width: 46% !important;
+                /* border: 1px solid transparent !important; */
+
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <!--the header of the page that contain navbar and slider-->
+    <header>
+        <div class="navbar d-flex bg-dark row m-0 p-0 ps-4 pe-4">
+            <!--navbar-->
+            <nav class="navbar navbar-expand-lg bg-dark p-0 text-bg col-12 col-lg-9">
+                <div class="container-fluid d-flex justify-content-between row m-0">
+                    <h1 class="col-2">
+                        <a class="navbar-brand logo" href="#">
+                            <img src="./assets/imgs/logo-2.png" alt="logo">
+                        </a>
+                    </h1>
+                    <button class="col-2 navbar-toggler burger-menu mobile_menu" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <div class="col-lg-8 col-xl-9 collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 offset-xl-2 offset-xxl-3">
+
+                            <li class="nav-item dropdown me-xxl-2">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Home
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="nav-item   me-xxl-2">
+                                <a class="nav-link active" aria-current="page" href="#">About us</a>
+                            </li>
+                            <li class="nav-item me-xxl-2">
+                                <a class="nav-link" href="#">our menus</a>
+                            </li>
+
+                            <li class="nav-item me-xxl-2">
+                                <a class="nav-link" href="#">team</a>
+                            </li>
+                            <li class="nav-item me-xxl-2">
+                                <a class="nav-link" href="#">testmonials</a>
+                            </li>
+                            <li class="nav-item me-xxl-2">
+                                <a class="nav-link" href="#">blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">contact us</a>
+                            </li>
+                        </ul>
+                        <form class="mb-2 d-flex d-lg-none" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+
+            <!--Details about our site and reserve table button -->
+            <div class="col-3 d-none d-lg-flex row m-0 p-0 g-2 justify-content-evenly">
+                <button class="col-2 btn btn-dark navbar-details burger-menu" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" title="navbar details">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <div class="w-50 nav-details offcanvas offcanvas-end bg-black text-light overflow-auto p-2"
+                    tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                    <button type="button"
+                        class="btn-close btn-close-white d-flex align-self-end m-3 link-light text-light btn-light"
+                        data-bs-dismiss="offcanvas" aria-label="Close">
+                    </button>
+
+                    <div class="offcanvas-header flex-column justify-content-start  ms-5 ps-5 pt-3 pe-5">
+                        <h2 class="text-center pb-2 offcanvas-title" id="offcanvasRightLabel">
+                            <a href="#"><img src="./assets/imgs/logo-2.png" alt="our logo"></a>
+                        </h2>
+                        <h3 class="">Order healthy and fresh food any time, Enjoy an exceptional journey of taste.
+                        </h3>
+                    </div>
+
+                    <div class="offcanvas-body overflow-visible ms-5  ps-5 pt-3 pe-5">
+
+                        <h2 class="pb-2">
+                            Contact Info
+                        </h2>
+                        <ul class="contact list-unstyled">
+
+                            <li class=" d-flex justify-content-start align-items-center contact-address">
+                                <span class="location">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </span>
+                                <span>684 West College St.
+                                    Sun
+                                    City, United States
+                                    America, 064781.
+                                </span>
+                            </li>
+
+
+                            <li class="d-flex justify-content-start align-items-center  contact-phone">
+
+                                <span class="phone">
+                                    <i class="fa-solid fa-headphones-simple"></i>
+                                </span>
+                                <span><a href="tel:+(528)456-7592">+(528) 456-7592</a>
+                                </span>
+                            </li>
+
+
+                            <li class="d-flex justify-content-start  align-items-center  contact-email">
+                                <span class="email">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </span>
+                                <span>
+                                    <a href="tel:info@restaurt.com">info@restaurt.com</a>
+                                </span>
+                            </li>
+                        </ul>
+
+
+                        <h2 class="pb-2">
+                            Get Updates
+                        </h2>
+
+                        <form class="row align-items-center p-1">
+                            <div class="col-12">
+                                <label class="visually-hidden" for="emailNavbar">email</label>
+                                <div class="input-group">
+
+
+                                    <input type="email" class="rounded-0 form-control" id="emailNavbar"
+                                        placeholder="Email Address">
+                                    <div class="input-group-text p-0 rounded-0">
+                                        <button type="button" class="rounded-0 btn btn-warning" title="signup">
+                                            <a href="#">SignUp</a>
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </form>
+
+
+                        <div class="grid-dishes row m-0 justify-content-between g-2 mt-3">
+
+                            <div class="col-3" data-bs-toggle="modal" data-bs-target="#dishOne">
+                                <img class="img-fluid" src="./assets/imgs/dishes/sec-product.jpg" alt="">
+                            </div>
+
+                            <div class="col-3" data-bs-toggle="modal" data-bs-target="#dishTwo"><img class="img-fluid"
+                                    src="./assets/imgs/dishes/sec-product2.jpg" alt="">
+                            </div>
+                            <div class="col-3" data-bs-toggle="modal" data-bs-target="#dishThree"><img class="img-fluid"
+                                    src="./assets/imgs/dishes/sec-product3.jpg" alt="">
+                            </div>
+                            <div class="col-3 " data-bs-toggle="modal" data-bs-target="#dishFour"><img class="img-fluid"
+                                    src="./assets/imgs/dishes/r-product3-1-1.jpg" alt="">
+                            </div>
+                            <div class="col-3" data-bs-toggle="modal" data-bs-target="#dishFive"><img class="img-fluid"
+                                    src="./assets/imgs/dishes/r-product9-1-1.jpg" alt="">
+                            </div>
+                            <div class=" col-3" data-bs-toggle="modal" data-bs-target="#dishSix"><img class="img-fluid"
+                                    src="./assets/imgs/dishes/sec-product4.jpg" alt="">
+                            </div>
+                            <div class="col-3 " data-bs-toggle="modal" data-bs-target="#dishSeven"><img
+                                    class="img-fluid" src="./assets/imgs/dishes/sec-product5.jpg" alt="">
+                            </div>
+                            <div class="col-3" data-bs-toggle="modal" data-bs-target="#dishEight"><img class="img-fluid"
+                                    src="./assets/imgs/dishes/sec-product6.jpg" alt="">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="rounded-0 col-7 btn btn-warning p-2 text-center border-0">
+                    <a class="d-flex text-light justify-content-center text-decoration-none" href="#">Book A Table</a>
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!--Create our food header carousel-->
+        <div id="headerFoodCarousel" class="h-100 bg-dark text-light carousel carousel-dark slide">
+            <div
+                class="container-fluid pb-2 pt-2 pt-xlg-5 pb-xlg-5 ps-2 pe-2 ps-xlg-5 pe-xlg-1  h-100 row m-auto justify-content-between align-items-center">
+
+                <div class="carousel-indicators d-none d-xl-block col-1 order-0">
+                    <button type="button" data-bs-target="#headerFoodCarousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#headerFoodCarousel" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#headerFoodCarousel" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+
+
+                <div class="main-content col-12 col-lg-11 offset-lg-1 order-1">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active row" data-bs-interval="10000">
+
+                            <div
+                                class="carousel-caption d-inline-flex flex-column justify-content-center justify-content-md-between align-items-center align-items-md-start  col-12 col-md-8 col-lg-5 ">
+                                <h2>GOod Food Made Easy</h2>
+                                <h3>Are you Hungry ?</h3>
+                                <p class="text-center text-md-start">Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Ex
+                                    quasi
+                                    animi, tempora ab
+                                    quidem
+                                    unde, dolores adipisci ipsa illum aspernatur iste magni atque itaque id quod
+                                    voluptatibus
+                                    eaque excepturi quisquam?.</p>
+                                <button type="button"
+                                    class="btn btn-warning w-50 w-md-25 border-outline-none p-2 text-center text-light">Learn
+                                    More</button>
+                            </div>
+
+                            <div
+                                class="image d-inline-flex flex-column align-items-center justify-content-center justify-content-lg-center align-items-lg-end col-12 mt-4 mt-md-0 col-md-6">
+                                <p class="ind text-center d-md-none">01</p>
+                                <img src="./assets/imgs/dishes/chicken-grill2.png" alt="...">
+                            </div>
+
+                        </div>
+                        <div class="carousel-item row" data-bs-interval="2000">
+
+                            <div
+                                class="carousel-caption d-inline-flex flex-column justify-content-center justify-content-md-between align-items-center align-items-md-start  col-12 col-md-8 col-lg-5">
+                                <h2>special dinner for you</h2>
+                                <h3>special dinner for you</h3>
+                                <p class="text-center text-md-start">Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Ex quasi animi, tempora ab
+                                    quidem
+                                    unde, dolores adipisci
+                                    ipsa illum aspernatur iste magni atque itaque id quod voluptatibus eaque excepturi
+                                    quisquam?.</p>
+                                <button type="button"
+                                    class="btn btn-warning w-50 w-md-25 border-outline-none p-2 text-center text-light">Learn
+                                    More</button>
+
+                            </div>
+                            <div
+                                class="image d-inline-flex flex-column align-items-center justify-content-center align-items-md-end col-12 mt-4 mt-md-0 col-md-6">
+                                <p class="ind text-center d-md-none">02</p>
+
+                                <img src="./assets/imgs/dishes/food-3-1.png" alt="...">
+                            </div>
+
+                        </div>
+                        <div class="carousel-item row">
+                            <div
+                                class="carousel-caption d-inline-flex flex-column justify-content-center justify-content-md-between align-items-center align-items-md-start col-12 col-md-8 col-lg-5">
+                                <h2>Tastes Like a Paradise</h2>
+                                <h3>Today special menu</h3>
+                                <p class="text-center text-md-start">Lorem ipsum dolor sit amet consectetur adipisicing
+                                    elit. Ex quasi animi, tempora ab
+                                    quidem
+                                    unde, dolores adipisci
+                                    ipsa illum aspernatur iste magni atque itaque id quod voluptatibus eaque excepturi
+                                    quisquam?.</p>
+                                <button type="button"
+                                    class="btn btn-warning w-50 w-md-25 border-outline-none p-2 text-center text-light">Learn
+                                    More</button>
+
+                            </div>
+                            <div
+                                class="image d-inline-flex flex-column align-items-center justify-content-center align-items-md-end col-12 mt-4 mt-md-0 col-md-6">
+                                <p class="ind text-center d-md-none">03</p>
+                                <img src="./assets/imgs/dishes/italian-food.png" alt="...">
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div
+                    class="controls offset-0 offset-lg-1  order-2 col-12 col-md-7 col-lg-6 row d-flex justify-content-between g-lg-3 align-content-center flex-row">
+
+
+                    <button class="carousel-control-prev col-6" type="button" data-bs-target="#headerFoodCarousel"
+                        data-bs-slide="prev">
+                        <div class="row g-lg-3 d-none d-md-flex p-1">
+                            <div class="col-md-4 col-lg-3">
+                                <img src="./assets/imgs/dishes/chicken-grill2.png" class="img-fluid mt-1 rounded-start"
+                                    alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">prev</h5>
+                                    <p class="card-text">Delecios Food</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-light d-md-none">prev</p>
+
+                        <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span> -->
+                    </button>
+
+                    <button class="carousel-control-next col-6" type="button" data-bs-target="#headerFoodCarousel"
+                        data-bs-slide="next">
+                        <div class="row g-lg-3 d-none d-md-flex p-1">
+                            <div class="col-md-4 col-lg-3">
+                                <img src="./assets/imgs/dishes/chicken-grill2.png" class="img-fluid mt-1 rounded-start"
+                                    alt="...">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">next</h5>
+                                    <p class="card-text">Delecios Food</p>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-light d-md-none">Next</p>
+
+                        <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span> -->
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- all Modals for dishes  -->
+    <section class="Modals">
+
+        <div class="dishes modal modal-fullscreen fade" id="dishOne" tabindex="-1" aria-labelledby="dishOneLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content  m-auto w-75">
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-5 text-center" id="dishOneLabel">Dish one</h2>
+                        <button type="button" class="btn-close-white btn-close " data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body justify-content-center align-items-center d-flex">
+                        <img class="img-fluid" src="./assets/imgs/dishes/sec-product.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="dishes modal modal-fullscreen fade" id="dishTwo" tabindex="-1" aria-labelledby="dishTwoLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content bg-dark  m-auto w-75">
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-5 text-center" id="dishTwoLabel">Dish one</h2>
+                        <button type="button" class="btn-close-white btn-close " data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body justify-content-center align-items-center d-flex">
+                        <img class="img-fluid" src="./assets/imgs/dishes/sec-product2.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="dishes modal modal-fullscreen fade" id="dishThree" tabindex="-1" aria-labelledby="dishThreeLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content  m-auto w-75">
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-5 text-center" id="dishThreeLabel">Dish one</h2>
+                        <button type="button" class="btn-close-white btn-close " data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body justify-content-center align-items-center d-flex">
+                        <img class="img-fluid" src="./assets/imgs/dishes/sec-product3.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dishes modal modal-fullscreen fade" id="dishFour" tabindex="-1" aria-labelledby="dishFourLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content  m-auto w-75">
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-5 text-center" id="dishFourLabel">Dish one</h2>
+                        <button type="button" class="btn-close-white btn-close " data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body justify-content-center align-items-center d-flex">
+                        <img class="img-fluid" src="./assets/imgs/dishes/r-product3-1-1.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dishes modal modal-fullscreen fade" id="dishFive" tabindex="-1" aria-labelledby="dishFiveLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content  m-auto w-75">
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-5 text-center" id="dishFiveLabel">Dish one</h2>
+                        <button type="button" class="btn-close-white btn-close " data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body justify-content-center align-items-center d-flex">
+                        <img class="img-fluid" src="./assets/imgs/dishes/r-product9-1-1.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="dishes modal modal-fullscreen fade" id="dishSix" tabindex="-1" aria-labelledby="dishSixLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content  m-auto w-75">
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-5 text-center" id="dishSixLabel">Dish one</h2>
+                        <button type="button" class="btn-close-white btn-close " data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body justify-content-center align-items-center d-flex">
+                        <img class="img-fluid" src="./assets/imgs/dishes/sec-product4.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="dishes modal modal-fullscreen fade" id="dishSeven" tabindex="-1" aria-labelledby="dishSevenLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content  m-auto w-75">
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-5 text-center" id="dishSevenLabel">Dish one</h2>
+                        <button type="button" class="btn-close-white btn-close " data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body justify-content-center align-items-center d-flex">
+                        <img class="img-fluid" src="./assets/imgs/dishes/sec-product5.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dishes modal modal-fullscreen fade" id="dishEight" tabindex="-1" aria-labelledby="dishEightLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content  m-auto w-75">
+                    <div class="modal-header">
+                        <h2 class="modal-title fs-5 text-center" id="dishEightLabel">Dish one</h2>
+                        <button type="button" class="btn-close-white btn-close " data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body justify-content-center align-items-center d-flex">
+                        <img class="img-fluid" src="./assets/imgs/dishes/sec-product6.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!--End dishes Modals-->
+
+
+    <div id="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <div id="cookie-notice" class="w-100 bg-dark text-white pt-3 px-4 pb-1 position-fixed"
+        style="z-index: 1000; bottom: 0;">
+
+        <div class="container p-2">
+
+            <div class="row">
+
+                <div class="col-sm-8 col-md-9">
+
+                    <p class="p-2">This website uses cookies so that we can provide you with the best website
+                        experience. By clicking “I Accept” you acknowledge the use of cookies and to our <a
+                            href="#"><u>Privacy Policy</u></a>.</p>
+
+                </div>
+
+                <div class="col-sm-4 col-md-3">
+
+                    <a class="i-accept btn btn-primary m-2">I Accept</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!--[if IE]><div class="w-100 text-center bg-dark text-white pt-3 px-4 pb-1 position-fixed" style="z-index: 1000; bottom: 0;"><p onClick="parentNode.remove()">Please use a modern browser for a better browsing experience. <span class="float-right">X</span></p></div><![endif]-->
+
+    <script src="https://code.jquery.com/jquery-3.6.3
+.min.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3
+/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+
+        (function ($) {
+
+            $('.i-accept').on('click', function () {
+
+                if (localStorage.noshow !== '1') {
+
+                    $('#cookie-notice').addClass('d-none');
+
+                    localStorage.noshow = '1';
+
+                }
+
+            });
+
+            if (localStorage.noshow == '1') {
+
+                $('#cookie-notice').addClass('d-none');
+
+            };
+
+        })(jQuery);
+
+    </script>
+
+    <script type="text/javascript">
+
+        $(window).on('load', function () {
+
+            $("#loader-wrapper").fadeOut(700);
+
+        });
+
+    </script>
+
+</body>
+
+</html>
