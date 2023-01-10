@@ -20,6 +20,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
     <link rel="icon" href="./assets/imgs/logo-2.png">
     <style>
         * {
@@ -228,6 +231,25 @@
             width: 100%
         }
 
+        .aboutus {
+            position: relative;
+            padding-bottom: 170px !important;
+        }
+
+        div.about-img img {
+            position: absolute;
+            right: -25px;
+            top: 170px;
+            width: 550px;
+            max-width: 100%;
+        }
+
+
+        .ourprogres .main-container {
+            gap: 10px !important;
+            flex-wrap: nowrap;
+        }
+
         @media(max-width:767px) {
             header {
                 height: auto !important;
@@ -265,6 +287,17 @@
             div.image img {
                 width: 75%
             }
+
+            div.about-img img {
+                position: relative;
+                right: 0px;
+                top: 0
+            }
+
+
+            .ourprogres .main-container {
+                flex-wrap: wrap;
+            }
         }
 
         header .main-content {
@@ -294,6 +327,100 @@
 
             }
 
+            div.about-img img {
+                position: relative;
+                right: 0px;
+                top: 0
+            }
+
+            .ourprogres .main-container {
+                flex-wrap: wrap;
+            }
+
+
+
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap');
+
+        .signature {
+            font-family: 'Mrs Saint Delafield', cursive;
+        }
+
+        .features ul {
+            gap: 20px
+        }
+
+        .progress-index img {
+            width: 60px
+        }
+
+        .progress-index {
+            margin-bottom: 5px;
+        }
+
+        .ourprogres .progress-banner img {
+            max-width: 130px;
+        }
+
+        .ourprogres .progress-banner {
+            background-image: url("./assets/imgs/Bakgrounds/ttten-1.png");
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+
+        * {
+            box-sizing: border-box !important;
+        }
+
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .getinTouch {
+            background-image: url("./assets/imgs/otherimgs/bg-img-1.jpg");
+            background-size: cover;
+            padding-top: 100px;
+        }
+
+        .getinTouch .main-content {
+            z-index: 2;
+            height: 500px;
+        }
+
+        .getinTouch .main-content .ourvideo {
+            background-color: transparent;
+        }
+
+        .progress-banner .element {
+            grid-template-columns: 100px auto repeat(1, minmax(max-content, 1fr)) 50px;
+            /* grid-auto-columns: repeat(4, min-content); */
+            grid-template-rows: auto;
+            gap: 10px;
+            position: relative;
+        }
+
+        hr {
+            display: inline-block;
+            width: 100%;
+        }
+
+        .progress-banner .element img {
+            border-radius: 100%;
+        }
+
+        .ourMenu .progress-banner {
+            position: relative;
+        }
+
+        .progress-banner p.desc {
+            /* padding-left: 6.8rem !important; */
+            /* margin-left: 3rem; */
+            position: absolute;
+            bottom: -10px;
+            left: 90px;
         }
     </style>
 </head>
@@ -488,14 +615,10 @@
             </div>
 
         </div>
-
-
-
         <!--Create our food header carousel-->
         <div id="headerFoodCarousel" class="h-100 bg-dark text-light carousel carousel-dark slide">
             <div
                 class="container-fluid pb-2 pt-2 pt-xlg-5 pb-xlg-5 ps-2 pe-2 ps-xlg-5 pe-xlg-1  h-100 row m-auto justify-content-between align-items-center">
-
                 <div class="carousel-indicators d-none d-xl-block col-1 order-0">
                     <button type="button" data-bs-target="#headerFoodCarousel" data-bs-slide-to="0" class="active"
                         aria-current="true" aria-label="Slide 1"></button>
@@ -635,29 +758,340 @@
             </div>
 
         </div>
-
     </header>
 
+    <!--Create About us section -->
+
+    <section class="aboutus bg-dark pb-5 text-light">
+        <div class="container main-container row m-auto position-relative bg-dark p-0 h-100">
+            <div class="main-features col-12 col-lg-6 order-1 bg-dark p-3 p-lg-5 ">
+                <h2>About us</h2>
+                <h3>Enjoy an Exceptional Journey of Taste</h3>
+                <span class="diamond-shape">
+                    <!--Here we will create gradieent border with before pseudo class-->
+                </span>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                    totam rem aperiam,
+                    eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta explicabo.</p>
+                <hr class="mt-3 mb-3 text-light">
+                <div class="row features pt-3 pb-3">
+                    <ul class="col-12 col-lg-6 list-unstyled d-flex flex-column">
+                        <li>
+                            <i class="fa-regular fa-square-check"></i>
+                            <span>Good Quality Food</span>
+                        </li>
+                        <li>
+                            <i class="fa-regular fa-square-check"></i>
+                            <span>Fantastic Staff & Location</span>
+                        </li>
+                        <li>
+                            <i class="fa-regular fa-square-check"></i>
+                            <span>The Ambience & Cleanliness</span>
+                        </li>
+                        <li>
+                            <button type="button" class="rounded-0 col-7 btn btn-warning p-2 text-center border-0">
+                                <a class="d-flex text-light justify-content-center text-decoration-none" href="#">Learn
+                                    More</a>
+                            </button>
+                        </li>
+                    </ul>
+                    <div class="col-12 col-lg-5 ceo-info">
+                        <h3 class="signature">Zienab Muhammad , Muhammad Ramadan</h3>
+                        <h4>CEO and Founder</h4>
+                        <button type="button"
+                            class="d-flex d-md-none rounded-0 col-7 btn btn-warning p-2 text-center border-0">
+                            <a class="d-flex text-light justify-content-center text-decoration-none" href="#">Learn
+                                More</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="about-img col-12 col-lg-6 order-0 p-0 position-relative">
+                <div class="experince bg-black p-3 p-lg-5">
+                    <h3>25+</h3>
+                    <span class="d-none d-lg-flex seperator"> | </span>
+                    <h4>Years Of Experience</h4>
+                </div>
+                <img src="./assets/imgs/chiefs/about-imgres1-1.jpg" alt="" class="p-3 p-lg-0 img-fluid">
+            </div>
+
+        </div>
+    </section>
 
 
+    <!--our progress section-->
+    <section class="ourprogres bg-dark text- pb-4">
+        <h2 class="text-center mb-3">our progress</h2>
+        <h3 class="text-center mb-5">Healthy & Improves Your Mood</h3>
+        <span class="seperator">
+            <!--we will use before and after psudo classes-->
+        </span>
+        <div
+            class="p-0 main-container container container-md-fluid container-lg m-auto row d-flex justify-content-around">
+            <div class="p-0 card col-11 col-md-5 col-lg-4">
+                <div class="card-body">
+                    <div class="progress-index d-flex justify-content-between align-items-center">
+                        <img src="./assets/imgs/icons/r-icons-5.png" class="" alt="...">
+                        <h3>01</h3>
+                    </div>
+                    <h4 class="card-title">Clean Bar</h4>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's
+                        contentLorem Ipsum is simply dummy text of the printing typesetting industry ipsum..</p>
+                </div>
+                <img src="./assets/imgs/chiefs/clean-bar-1.jpg" class="w-100 img-fluid" alt="...">
+            </div>
+
+            <div class="p-0 card col-11 col-md-5 col-lg-4">
+                <div class="card-body">
+                    <div class="progress-index d-flex justify-content-between align-items-center">
+                        <img src="./assets/imgs/icons/restaurant-1.png" class="" alt="...">
+                        <h3>02</h3>
+                    </div>
+                    <h4 class="card-title">Skilled Chefs</h4>
+                    <p class="card-text">Lorem Ipsum is simply dummy text of the printing typesetting industry ipsum.
+                    </p>
+                </div>
+                <img src="./assets/imgs/chiefs/great-chefs-1.jpg" class="w-100 img-fluid" alt="...">
 
 
+            </div>
+
+            <div class="p-0 card col-11 col-md-11 col-lg-4">
+                <div class="card-body">
+                    <div class="progress-index d-flex justify-content-between align-items-center">
+                        <img src="./assets/imgs/icons/r-icons-6.png" class="" alt="...">
+                        <h3>03</h3>
+                    </div>
+                    <h4 class="card-title">Fresh Products</h4>
+                    <p class="card-text">Lorem Ipsum is simply dummy text of the printing typesetting industry ipsum.
+                    </p>
+                </div>
+                <img src="./assets/imgs/otherimgs/healthy-foods1-1.jpg" class="w-100 img-fluid" alt="...">
+            </div>
+        </div>
+
+        <div
+            class="progress-banner m-5 container col-11 m-auto mt-5 bg-dark row pt-3 pb-3 d-flex align-items-center justify-content-center">
+            <img src="./assets/imgs/icons/meat-1-1-pwvftov0oevxravsmeoqvlhq2qbgpb6hp2zlxoppyg.png"
+                class="col-5 col-md-2 pe-lg-4" alt="">
+            <div class="col-11 col-lg-8 details">
+                <h3>We Have 25+ Years of Experience, Give Better Quality Results</h3>
+                <h4>Perspiciatis unde omnis iste natus error sit voluptatem laudantium, totam rem, eaque ipsa quae
+                </h4>
+            </div>
+            <button type="button"
+                class="col-6 col-lg-2 d-flex rounded-0 col-7 btn btn-warning p-2 text-center border-0">
+                <a class="d-flex text-light justify-content-center text-decoration-none" href="#">Learn
+                    More</a>
+            </button>
+        </div>
+
+    </section>
+
+    <!--our Get in touch section section-->
+
+    <section class="getinTouch bg-dark position-relative  text-light">
+
+        <div class="overlay position-absolute top-0 start-0 w-100 h-100"></div>
+        <div class="main-content position-relative container row m-auto">
+            <div class="col-11 col-md-6 bg-dark p-5">
+                <h2>Get In Touch</h2>
+                <h3>Find Us Here. Make Real Results Happen.</h3>
+                <span class="sperator"></span>
+                <span class="stars">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                        class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </span>
+                <p>Trust Score 4.5 (Based on 1,200 reviews)
+                </p>
+                <span>
+                    <i class="fa-regular fa-face-smile"></i> Read Feedback
+                </span>
+            </div>
+
+            <div class="ourvideo col-11 col-md-6 p-5 d-flex justify-content-center align-items-center">
+                <button type="button" class="btn btn-primary video" data-bs-toggle="modal" data-bs-target="#ourVideo"
+                    title="videobutton">
+                    <i class="fa-solid fa-play"></i>
+                </button>
+            </div>
+        </div>
+        </div>
 
 
+    </section>
 
+    <!--Our Menu Section-->
 
+    <section class="ourMenu bg-dark pt-5 text-center">
+        <h2 class="text-center">From Our Menu</h2>
+        <h3 class="text-center">Delicious Food Forever</h3>
+        <span class="seperator"></span>
+        <div class="container row m-auto bg-dark d-flex justify-content-center">
+            <div class="col-11 col-lg-6">
+                <div class="progress-banner  pt-3 pb-3 d-flex flex-column  justify-content-center">
+                    <div class="element d-grid justify-content-start  w-100 ">
+                        <img src="./assets/imgs/dishes/r-product15-1-1-pwvft0f80dahxegpr9wwji7dnq6vnd6xfimx7lmjno.jpg"
+                            class="pe-lg-2" alt="">
+                        <div class="details ">
 
+                            <h3>
+                                Raw Scallops from Erquy</h3>
 
+                        </div>
+                        <hr class="flex-grow-2 text-light">
+                        <p class="col-auto d-flex">
+                            $32.8
+                        </p>
+                    </div>
+                    <p class="ps-4 desc">Candied Jerusalem artichokes, truffle</p>
 
+                </div>
+                <div class="progress-banner  pt-3 pb-3 d-flex flex-column  justify-content-center">
+                    <div class="element d-grid justify-content-start  w-100 ">
+                        <img src="./assets/imgs/dishes/r-product15-1-1-pwvft0f80dahxegpr9wwji7dnq6vnd6xfimx7lmjno.jpg"
+                            class="pe-lg-2" alt="">
+                        <div class="details ">
 
+                            <h3>
+                                Raw Scallops from Erquy</h3>
 
+                        </div>
+                        <hr class="flex-grow-2 text-light">
+                        <p class="col-auto d-flex">
+                            $32.8
+                        </p>
+                    </div>
+                    <p class="ps-4 desc">Candied Jerusalem artichokes, truffle</p>
 
+                </div>
 
+                <div class="progress-banner  pt-3 pb-3 d-flex flex-column  justify-content-center ">
+                    <div class="element d-grid justify-content-start  w-100 ">
+                        <img src="./assets/imgs/dishes/r-product15-1-1-pwvft0f80dahxegpr9wwji7dnq6vnd6xfimx7lmjno.jpg"
+                            class="pe-lg-2" alt="">
+                        <div class="details ">
 
+                            <h3>
+                                Raw Scallops from Erquy</h3>
 
+                        </div>
+                        <hr class="flex-grow-2 text-light">
+                        <p class="col-auto d-flex">
+                            $32.8
+                        </p>
+                    </div>
+                    <p class="ps-4 desc">Candied Jerusalem artichokes, truffle</p>
 
+                </div>
 
+                <div class="progress-banner  pt-3 pb-3 d-flex flex-column justify-content-center">
+                    <div class="element d-grid justify-content-start  w-100 ">
+                        <img src="./assets/imgs/dishes/r-product15-1-1-pwvft0f80dahxegpr9wwji7dnq6vnd6xfimx7lmjno.jpg"
+                            class="pe-lg-2" alt="">
+                        <div class="details ">
 
+                            <h3>
+                                Greek Salad</h3>
+
+                        </div>
+                        <hr class="flex-grow-2 text-light">
+                        <p class="col-auto d-flex">
+                            $32.8
+                        </p>
+                    </div>
+                    <p class="ps-4 desc">Candied Jerusalem artichokes, truffle</p>
+
+                </div>
+
+            </div>
+            <div class="col-11 col-lg-6">
+                <div class="progress-banner  pt-3 pb-3 d-flex flex-column justify-content-center">
+                    <div class="element d-grid justify-content-start  w-100 ">
+                        <img src="./assets/imgs/dishes/r-product15-1-1-pwvft0f80dahxegpr9wwji7dnq6vnd6xfimx7lmjno.jpg"
+                            class="pe-lg-2" alt="">
+                        <div class="details ">
+
+                            <h3>
+                                Raw Scallops from Erquy</h3>
+
+                        </div>
+                        <hr class="flex-grow-2 text-light">
+                        <p class="col-auto d-flex">
+                            $32.8
+                        </p>
+                    </div>
+                    <p class="ps-4 desc">Candied Jerusalem artichokes, truffle</p>
+
+                </div>
+                <div class="progress-banner  pt-3 pb-3 d-flex flex-column justify-content-center">
+                    <div class="element d-grid justify-content-start  w-100 ">
+                        <img src="./assets/imgs/dishes/r-product15-1-1-pwvft0f80dahxegpr9wwji7dnq6vnd6xfimx7lmjno.jpg"
+                            class="pe-lg-2" alt="">
+                        <div class="details ">
+
+                            <h3>
+                                Raw Scallops from Erquy</h3>
+
+                        </div>
+                        <hr class="flex-grow-2 text-light">
+                        <p class="col-auto d-flex">
+                            $32.8
+                        </p>
+
+                    </div>
+                    <p class="ps-4 desc">Candied Jerusalem artichokes, truffle</p>
+
+                </div>
+
+                <div class="progress-banner  pt-3 pb-3 d-flex flex-column justify-content-center">
+                    <div class="element d-grid justify-content-start  w-100 ">
+                        <img src="./assets/imgs/dishes/r-product15-1-1-pwvft0f80dahxegpr9wwji7dnq6vnd6xfimx7lmjno.jpg"
+                            class="pe-lg-2" alt="">
+                        <div class="details ">
+
+                            <h3>
+                                Raw Scallops from Erquy</h3>
+
+                        </div>
+                        <hr class="flex-grow-2 text-light">
+                        <p class="col-auto d-flex">
+                            $32.8
+                        </p>
+                    </div>
+                    <p class="ps-4 desc">Candied Jerusalem artichokes, truffle</p>
+
+                </div>
+
+                <div class="progress-banner  pt-3 pb-3 d-flex flex-column  justify-content-center">
+                    <div class="element d-grid justify-content-start  w-100 ">
+                        <img src="./assets/imgs/dishes/r-product15-1-1-pwvft0f80dahxegpr9wwji7dnq6vnd6xfimx7lmjno.jpg"
+                            class="pe-lg-2" alt="">
+                        <div class="details ">
+
+                            <h3>
+                                Greek Salad</h3>
+
+                        </div>
+                        <hr class="flex-grow-2 text-light">
+                        <p class="col-auto d-flex">
+                            $32.8
+                        </p>
+                    </div>
+                    <p class="ps-4 desc">Candied Jerusalem artichokes, truffle</p>
+
+                </div>
+
+            </div>
+
+            <button type="button"
+                class="col-6 col-lg-3 mt-5 mb-5 d-flex rounded-0 btn btn-warning p-2 justify-content-center text-center border-0">
+                <a class="d-flex text-light justify-content-center text-decoration-none" href="#">Learn
+                    More</a>
+            </button>
+        </div>
+    </section>
 
 
 
@@ -805,6 +1239,24 @@
 
     </section>
     <!--End dishes Modals-->
+
+    <!--Modal for promotional video-->
+    <div class="modal  fade" id="ourVideo" tabindex="-1" aria-labelledby="ourVideoLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content container">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="ourVideoLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body m-auto">
+                    <iframe src="https://www.youtube.com/embed/Poo6Vvx_se8" title="BREATHE Marbella" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
 
     <div id="loader-wrapper">
