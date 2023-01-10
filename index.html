@@ -20,6 +20,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
@@ -422,6 +426,116 @@
             bottom: -10px;
             left: 90px;
         }
+
+        .reservation .main-content {
+            background: #222 url("./assets/imgs/otherimgs/form-bg-2.jpg");
+            background-size: cover;
+            position: relative;
+            bottom: -80px;
+        }
+
+        .statistics {
+            background: #222 url("./assets/imgs/Bakgrounds/res-bg-imge.png");
+            background-size: cover;
+            padding-top: 150px;
+            padding-bottom: 50px;
+        }
+
+        .ourprogres .main-container {
+            color: #fff !important
+        }
+
+
+
+
+
+        @media (max-width: 768px) {
+            #teamCarousel .carousel-inner .carousel-item>div {
+                display: none;
+            }
+
+            #teamCarousel .carousel-inner .carousel-item>div:first-child {
+                display: block;
+            }
+        }
+
+        #teamCarousel .carousel-inner .carousel-item.active,
+        #teamCarousel .carousel-inner .carousel-item-start,
+        #teamCarousel .carousel-inner .carousel-item-next,
+        #teamCarousel .carousel-inner .carousel-item-prev {
+            display: flex;
+
+        }
+
+        #teamCarousel .carousel-inner .carousel-item {
+            gap: 10px;
+            overflow: hidden;
+
+        }
+
+        #teamCarousel .carousel-inner .carousel-item>div {
+            overflow: hidden;
+        }
+
+
+        @media (min-width: 768px) {
+
+            #teamCarousel .carousel-inner .carousel-item-right.active,
+            #teamCarousel .carousel-inner .carousel-item-next,
+            #teamCarousel .carousel-item-next:not(.carousel-item-start) {
+                transform: translateX(25%) !important;
+            }
+
+            #teamCarousel .carousel-inner .carousel-item-left.active,
+            #teamCarousel .carousel-item-prev:not(.carousel-item-end),
+            #teamCarousel .active.carousel-item-start,
+            #teamCarousel .carousel-item-prev:not(.carousel-item-end) {
+                transform: translateX(-25%) !important;
+            }
+
+            #teamCarousel .carousel-item-next.carousel-item-start,
+            #teamCarousel .active.carousel-item-end {
+                transform: translateX(0) !important;
+            }
+
+            #teamCarousel .carousel-inner .carousel-item-prev,
+            .carousel-item-prev:not(.carousel-item-end) {
+                transform: translateX(-25%) !important;
+            }
+        }
+
+        /* section.location {
+            background: url("./assets/imgs/Bakgrounds/about-il-1.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: 100% 100%;
+        } */
+
+        .location {
+            position: relative;
+        }
+
+        .location .overlay {
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            background: url("./assets/imgs/Bakgrounds/about-il-1.png");
+            background-position: 39vw 6vh;
+            background-repeat: no-repeat;
+            background-size: 62% auto;
+            opacity: 0.16;
+            z-index: 1;
+        }
+
+        .location .main-content {
+
+            width: 100%;
+            height: 100%;
+            z-index: 3;
+            position: relative;
+        }
     </style>
 </head>
 
@@ -820,7 +934,7 @@
 
 
     <!--our progress section-->
-    <section class="ourprogres bg-dark text- pb-4">
+    <section class="ourprogres bg-black text- pb-4">
         <h2 class="text-center mb-3">our progress</h2>
         <h3 class="text-center mb-5">Healthy & Improves Your Mood</h3>
         <span class="seperator">
@@ -828,7 +942,7 @@
         </span>
         <div
             class="p-0 main-container container container-md-fluid container-lg m-auto row d-flex justify-content-around">
-            <div class="p-0 card col-11 col-md-5 col-lg-4">
+            <div class="p-0 card col-11 col-md-5 col-lg-4 bg-dark">
                 <div class="card-body">
                     <div class="progress-index d-flex justify-content-between align-items-center">
                         <img src="./assets/imgs/icons/r-icons-5.png" class="" alt="...">
@@ -842,7 +956,7 @@
                 <img src="./assets/imgs/chiefs/clean-bar-1.jpg" class="w-100 img-fluid" alt="...">
             </div>
 
-            <div class="p-0 card col-11 col-md-5 col-lg-4">
+            <div class="p-0 card col-11 col-md-5 col-lg-4 bg-dark">
                 <div class="card-body">
                     <div class="progress-index d-flex justify-content-between align-items-center">
                         <img src="./assets/imgs/icons/restaurant-1.png" class="" alt="...">
@@ -857,7 +971,7 @@
 
             </div>
 
-            <div class="p-0 card col-11 col-md-11 col-lg-4">
+            <div class="p-0 card col-11 col-md-11 col-lg-4 bg-dark">
                 <div class="card-body">
                     <div class="progress-index d-flex justify-content-between align-items-center">
                         <img src="./assets/imgs/icons/r-icons-6.png" class="" alt="...">
@@ -877,7 +991,8 @@
                 class="col-5 col-md-2 pe-lg-4" alt="">
             <div class="col-11 col-lg-8 details">
                 <h3>We Have 25+ Years of Experience, Give Better Quality Results</h3>
-                <h4>Perspiciatis unde omnis iste natus error sit voluptatem laudantium, totam rem, eaque ipsa quae
+                <h4 class="text-light">Perspiciatis unde omnis iste natus error sit voluptatem laudantium, totam rem,
+                    eaque ipsa quae
                 </h4>
             </div>
             <button type="button"
@@ -1084,22 +1199,224 @@
                 </div>
 
             </div>
-
+            <h5 class="text-light col-12 mt-5 mb-2 text-center">
+                During winter daily from 8:30 am to 9.00 pm
+            </h5>
             <button type="button"
                 class="col-6 col-lg-3 mt-5 mb-5 d-flex rounded-0 btn btn-warning p-2 justify-content-center text-center border-0">
                 <a class="d-flex text-light justify-content-center text-decoration-none" href="#">Learn
                     More</a>
             </button>
         </div>
+
+
     </section>
 
 
+    <!--Our Reservation Section-->
+    <section class="reservation bg-black">
+        <h2 class="text-center pt-5">Make an Reserve
+        </h2>
+        <h3 class="text-center pt-2">
+            Online Reservation
+
+        </h3>
+        <span class="seperator"></span>
+        <div class="main-content container row m-auto p-5 d-md-flex justify-content-center justify-content-md-between">
+            <form class="col-12 col-lg-8 col-xl-6 row bg-dark g-5 p-2 p-md-4 pb-5 d-flex justify-content-center">
+                <div class="col-11">
+                    <label for="validationServer01" class="form-label d-none">First name</label>
+                    <input type="text" class="form-control is-invalid" id="validationServer01" placeholder="Name"
+                        value="" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col-11">
+                    <label for="validationServer02" class="form-label d-none">phone Number</label>
+                    <input type="phone" class="form-control is-invalid" id="validationServer02" placeholder="phone"
+                        value="" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+
+                <div class="col-11">
+                    <label for="validationServer04" class="form-label d-none">persons</label>
+                    <select class="form-select invalid" id="validationServer04"
+                        aria-describedby="validationServer04Feedback" required>
+                        <option selected value="">1 Peron</option>
+                        <option>2 Peron</option>
+                        <option>3 Peron</option>
+                        <option>4 Peron</option>
+                        <option>5 Peron</option>
+                        <option>6 Peron</option>
+                        <option>7 Peron</option>
+                    </select>
+                    <div id="validationServer04Feedback" class="invalid-feedback">
+                        Please select a valid number.
+                    </div>
+                </div>
+                <div class="col-11">
+                    <label for="validationServer05" class="form-label d-none">Date</label>
+                    <select class="form-select invalid" id="validationServer06"
+                        aria-describedby="validationServer04Feedback" required>
+                        <option selected value="">6:00 pm </option>
+                        <option>7:00 pm</option>
+                        <option>8:00 pm</option>
+                        <option>9:00 pm</option>
+                        <option>10:00 pm</option>
+
+                    </select>
+                    <div id="validationServer05Feedback" class="invalid-feedback">
+                        Please provide a valid date.
+                    </div>
+                </div>
+                <div class="col-11">
+                    <label for="validationServer06" class="form-label d-none">time</label>
+                    <input type="date" class="form-control is-valid" id="validationServer05"
+                        aria-describedby="validationServer05Feedback" required>
+                    <div id="validationServer06Feedback" class="invalid-feedback">
+                        Please provide a valid date.
+                    </div>
+                </div>
+                <div class="col-11 col-md-6">
+                    <button type="submit"
+                        class="w-100 d-flex rounded-0 btn btn-warning p-2 justify-content-center text-center border-0">
+                        Book A Table
+                    </button>
+
+                </div>
+            </form>
+            <div class="message-reservation d-none">
+            </div>
+        </div>
+    </section>
+
+
+    <!--statistics section-->
+    <section class="statistics bg-dark">
+        <ul
+            class="list-unstyled container row m-auto d-flex justify-content-between align-items-center text-light text-center">
+            <li class="col-12 col-md-6 col-lg-3">
+                <h3 class="text-center">105+</h3>
+                <h5>Years of Foundation</h5>
+            </li>
+
+            <li class="col-12 col-md-6 col-lg-3">
+                <h3 class="text-center">10k</h3>
+                <h5>Satisfied Clients</h5>
+            </li>
+            <li class="col-12 col-md-6 col-lg-3">
+                <h3 class="text-center">540+</h3>
+                <h5>Global Reach</h5>
+            </li>
+            <li class="col-12 col-md-6 col-lg-3">
+                <h3 class="text-center">175+</h3>
+                <h5>Awards Winning</h5>
+            </li>
+        </ul>
+    </section>
+
+
+    <!--our team section-->
+    <section class="bg-dark pb-5">
+        <h2 class="text-center pt-5">Amazing Team
+        </h2>
+        <h3 class="text-center pt-2">
+            Meet Our Chefs
+        </h3>
+        <span class="seperator"></span>
+
+        <div class="container row m-auto justify-content-center justify-content-md-around d-flex g-5">
+            <div id="teamCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner w-100 row">
+                    <div class="carousel-item g-5 active" data-bs-interval="10000">
+                        <div class="col-11 col-md-6 col-lg-3">
+                            <div class="p-0 card">
+                                <img src="./assets/imgs/chiefs/team-1-1-1.jpg" class="card-img-top" alt="...">
+                                <div class="card-body d-flex justify-content-between g-5">
+                                    <div class="details">
+                                        <h5 class="card-title">Laurance Willburn</h5>
+                                        <h6>MAIN CHEFS</h6>
+                                    </div>
+                                    <div class="icon"><img src="./assets/imgs/icons/team-badge.png" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item g-5" data-bs-interval="2000">
+                        <div class="col-11 col-md-6 col-lg-3">
+                            <div class="p-0 card">
+                                <img src="./assets/imgs/chiefs/team-1-1-1.jpg" class="card-img-top" alt="...">
+                                <div class="card-body d-flex justify-content-between g-5">
+                                    <div class="details">
+                                        <h5 class="card-title">Laurance Willburn</h5>
+                                        <h6>MAIN CHEFS</h6>
+                                    </div>
+                                    <div class="icon"><img src="./assets/imgs/icons/team-badge.png" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item g-5" data-bs-interval="3000">
+                        <div class="col-11 col-md-6 col-lg-3 ">
+                            <div class="p-0 card">
+                                <img src="./assets/imgs/chiefs/team-1-1-1.jpg" class="card-img-top" alt="...">
+                                <div class="card-body d-flex justify-content-between g-5">
+                                    <div class="details">
+                                        <h5 class="card-title">Laurance Willburn</h5>
+                                        <h6>MAIN CHEFS</h6>
+                                    </div>
+                                    <div class="icon"><img src="./assets/imgs/icons/team-badge.png" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#teamCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#teamCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
 
 
 
 
+        </div>
+
+    </section>
 
 
+    <!--location section-->
+    <section class="location bg-dark p-5">
+        <div class="overlay"></div>
+        <div class="container main-content row m-auto p-5">
+            <div class="col-12 col-xl-6">
+                <h2>Find Location</h2>
+                <h3>Locations of Restaurants All Over the World</h3>
+                <span class="seperator"></span>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                    totam rem aperiam,
+                    eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta explicabo.</p>
+                <button type="button" class="d-flex rounded-0 col-7 btn btn-warning p-2 text-center border-0">
+                    <a class="d-flex text-light justify-content-center text-decoration-none" href="#">Learn
+                        More</a>
+                </button>
+            </div>
+
+            <div class="p-5 d-none d-xl-flex col-6 row ">
+
+            </div>
+
+        </div>
+    </section>
 
     <!-- all Modals for dishes  -->
     <section class="Modals">
@@ -1237,33 +1554,33 @@
             </div>
         </div>
 
-    </section>
-    <!--End dishes Modals-->
 
-    <!--Modal for promotional video-->
-    <div class="modal  fade" id="ourVideo" tabindex="-1" aria-labelledby="ourVideoLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content container">
-                <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="ourVideoLabel">Modal title</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body m-auto">
-                    <iframe src="https://www.youtube.com/embed/Poo6Vvx_se8" title="BREATHE Marbella" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
-                </div>
+        <!--Modal for promotional video-->
+        <div class="modal  fade" id="ourVideo" tabindex="-1" aria-labelledby="ourVideoLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content container">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="ourVideoLabel">Modal title</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body m-auto">
+                        <iframe src="https://www.youtube.com/embed/Poo6Vvx_se8" title="BREATHE Marbella" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
 
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+    <!--End dishes Modals-->
 
 
     <div id="loader-wrapper">
         <div class="loader"></div>
     </div>
 
-    <div id="cookie-notice" class="w-100 bg-dark text-white pt-3 px-4 pb-1 position-fixed"
+    <!-- <div id="cookie-notice" class="w-100 bg-dark text-white pt-3 px-4 pb-1 position-fixed"
         style="z-index: 1000; bottom: 0;">
 
         <div class="container p-2">
@@ -1288,7 +1605,7 @@
 
         </div>
 
-    </div>
+    </div> -->
 
 
     <!--[if IE]><div class="w-100 text-center bg-dark text-white pt-3 px-4 pb-1 position-fixed" style="z-index: 1000; bottom: 0;"><p onClick="parentNode.remove()">Please use a modern browser for a better browsing experience. <span class="float-right">X</span></p></div><![endif]-->
@@ -1299,42 +1616,22 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3
 /dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 
-    <script type="text/javascript">
-
-        (function ($) {
-
-            $('.i-accept').on('click', function () {
-
-                if (localStorage.noshow !== '1') {
-
-                    $('#cookie-notice').addClass('d-none');
-
-                    localStorage.noshow = '1';
-
-                }
-
-            });
-
-            if (localStorage.noshow == '1') {
-
-                $('#cookie-notice').addClass('d-none');
-
-            };
-
-        })(jQuery);
-
+    <script src="./script.js"></script>
+    <script>
+        // document.addEventListener("DOMContentLoaded", function () {
+        //     var popoverTriggerList = [].slice.call(
+        //         document.querySelectorAll('[data-bs-toggle="popover"]')
+        //     );
+        //     var popoverList = popoverTriggerList.map(function (element) {
+        //         return new bootstrap.Popover(element);
+        //     });
+        //     // Placement of popover on right
+        //     var popRight = document.getElementById("popRight");
+        //     var popoverRight = new bootstrap.Popover(popRight, {
+        //         placement: "right",
+        //     });
+        // });
     </script>
-
-    <script type="text/javascript">
-
-        $(window).on('load', function () {
-
-            $("#loader-wrapper").fadeOut(700);
-
-        });
-
-    </script>
-
 </body>
 
 </html>
