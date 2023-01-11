@@ -73,9 +73,7 @@ header {
 
 /*nav bar styling*/
 .logo img {
-  max-width: 150px;
-  width: 100%;
-  min-width: 100px;
+  width: 150px;
   padding: 10px;
 }
 
@@ -245,24 +243,6 @@ ul.dropdown-menu li:hover > a::after {
   }
 }
 
-@media (max-width: 992px) {
-  #navbarSupportedContent ul.navbar-nav {
-    justify-content: start;
-    align-items: start;
-    flex-direction: column;
-    gap: 15px;
-  }
-  #navbarSupportedContent ul.navbar-nav li {
-    width: 100%;
-  }
-  #navbarSupportedContent ul.navbar-nav li > a:hover::before {
-    width: 0;
-  }
-
-  header .dropdown-menu {
-    width: 100%;
-  }
-}
 .left-nav {
   position: relative;
 }
@@ -1008,4 +988,30 @@ button:not(.collapsed)::after {
   -webkit-animation: rotation 1s linear infinite;
 
   animation: rotation 1s linear infinite;
+}
+
+@media (max-width: 992px) {
+  #navbarSupportedContent ul.navbar-nav.desktop-nav {
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    text-align: left;
+    gap: 15px;
+  }
+  #navbarSupportedContent ul.navbar-nav.desktop-nav a {
+    text-align: left;
+  }
+  #navbarSupportedContent ul.navbar-nav li {
+    width: 100%;
+  }
+  #navbarSupportedContent ul.navbar-nav li > a:hover::before {
+    width: 0;
+  }
+
+  header .dropdown-menu {
+    width: 100%;
+  }
+  .logo img {
+    width: 100px;
+  }
 }
