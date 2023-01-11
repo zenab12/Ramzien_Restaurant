@@ -42,15 +42,15 @@ $(function () {
     (popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl)
   );
 
-  $(".i-accept").on("click", function () {
-    if (localStorage.noshow !== "1") {
-      $("#cookie-notice").addClass("d-none");
+  // $(".i-accept").on("click", function () {
+  //   if (localStorage.noshow !== "1") {
+  //     $("#cookie-notice").addClass("d-none");
 
-      localStorage.noshow = "1";
-    }
-  });
+  //     localStorage.noshow = "1";
+  //   }
+  // });
 
-  if (localStorage.noshow == "1") {
-    $("#cookie-notice").addClass("d-none");
-  }
+  // if (localStorage.noshow == "1") {
+  //   $("#cookie-notice").addClass("d-none");
+  // }
 });

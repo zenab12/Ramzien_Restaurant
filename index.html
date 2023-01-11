@@ -26,674 +26,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
     <link rel="icon" href="./assets/imgs/logo-2.png">
     <link rel="stylesheet" type="text/css" href="style.css" />
-
-    <style>
-        * {
-            box-sizing: border-box !important;
-        }
-
-        *:focus {
-            box-shadow: none !important;
-        }
-
-
-
-        .logo img {
-            width: 90px
-        }
-
-        .burger-menu span,
-        .navbar-details span {
-            width: 30px;
-            height: 1px;
-            display: block;
-            margin: 4px auto;
-            background-color: aliceblue;
-        }
-
-        .burger-menu span:first-of-type {
-            margin-top: 10px
-        }
-
-        .burger-menu span:first-of-type,
-        .burger-menu span:last-of-type {
-            width: 20px;
-            height: 1px;
-        }
-
-        .burger-menu span:last-of-type {
-            margin-bottom: 0px;
-        }
-
-        a {
-
-            color: lightgray !important;
-        }
-
-        ul.contact li>span:first-child {
-            line-height: 30px;
-            display: table-cell;
-            margin-right: 15px;
-            float: left;
-            font-weight: 400;
-            font-size: 16px;
-            margin-top: 3px;
-            color: #c59d5f
-        }
-
-
-
-        button.btn-close {
-            font-size: 30px;
-        }
-
-        .dishes .modal-dialog {
-            /* margin: 0 !important */
-            max-width: 100% !important;
-
-        }
-
-        .dishes .modal-content {
-            background-color: black !important;
-            color: #fff !important
-        }
-
-        body,
-        html {
-            height: 100% !important;
-        }
-
-
-        #headerFoodCarousel {
-            height: 700px !important;
-            box-sizing: border-box !important;
-            background-image: url("./assets/imgs/Bakgrounds/res-bg-image3.jpg") !important;
-            background-size: cover;
-        }
-
-        #headerFoodCarousel .carousel-indicators button {
-            width: 20px;
-            border-radius: 25px;
-            background-color: #c59d5f !important;
-            background-clip: unset !important;
-            opacity: 1 !important;
-            position: relative;
-        }
-
-        #headerFoodCarousel .carousel-indicators button::after {
-            position: absolute;
-            z-index: 10000;
-            content: "";
-            color: #fff;
-            background-color: #fff;
-            width: 10px;
-            border-radius: 100%;
-            top: -5px;
-            left: 5px;
-            display: block;
-            height: 10px;
-        }
-
-        #headerFoodCarousel .carousel-indicators button.active {
-            background-color: #fff !important;
-        }
-
-        #headerFoodCarousel .carousel-indicators button.active::after {
-
-            background-color: #c59d5f;
-        }
-
-        #headerFoodCarousel button img {
-            width: 200px !important
-        }
-
-        #headerFoodCarousel .carousel-indicators {
-            top: 35% !important;
-            position: relative !important;
-            margin-left: 0 !important;
-            transform: rotate(90deg);
-        }
-
-        #headerFoodCarousel .container,
-        #headerFoodCarousel .container>div,
-        #headerFoodCarousel .container-fluid>div {
-            position: relative !important;
-            color: #fff !important;
-        }
-
-        p,
-        h1,
-        h2,
-        h3 {
-            color: #fff !important;
-            text-align: left !important;
-            margin-bottom: 20px;
-        }
-
-        #headerFoodCarousel div.image {
-            margin-left: 5%;
-            margin-top: 0px;
-        }
-
-        #headerFoodCarousel .container-fluid {
-            position: relative !important;
-
-        }
-
-
-        #headerFoodCarousel .carousel-caption {
-            left: 0 !important;
-            right: 0 !important;
-            top: 50px;
-            height: 100%;
-            position: relative !important;
-
-        }
-
-        .carousel-inner {
-            height: 100%
-        }
-
-        #headerFoodCarousel .carousel-caption img {
-            width: 100%
-        }
-
-        #headerFoodCarousel .container-fluid .controls {
-            height: 100px;
-            position: absolute !important;
-            bottom: 30px !important;
-            left: 0px
-        }
-
-        #headerFoodCarousel .carousel-indicators {
-            position: relative !important;
-            margin-left: 0 !important;
-            transform: rotate(90deg);
-            top: 250px !important;
-        }
-
-        #headerFoodCarousel .carousel-control-next,
-        #headerFoodCarousel .carousel-control-prev {
-            width: 45% !important;
-            border-radius: 60px !important;
-            border: 1px solid #c59d5f !important;
-            background-color: #000 !important;
-            text-align: left !important;
-            color: #c59d5f !important;
-            /* padding-top: 15px !important; */
-        }
-
-        #headerFoodCarousel div.image {
-            position: absolute;
-            top: 20px;
-            z-index: 100;
-            right: -20px
-        }
-
-        div.image img {
-            width: 100%
-        }
-
-        .aboutus {
-            position: relative;
-            padding-bottom: 170px !important;
-        }
-
-        div.about-img img {
-            position: absolute;
-            right: -25px;
-            top: 170px;
-            width: 550px;
-            max-width: 100%;
-        }
-
-
-        .ourprogres .main-container {
-            gap: 10px !important;
-            flex-wrap: nowrap;
-        }
-
-        @media(max-width:767px) {
-            header {
-                height: auto !important;
-            }
-
-            #headerFoodCarousel .carousel-caption {
-                left: 0 !important;
-                right: 0 !important;
-                top: 5px !important;
-                position: relative !important;
-
-            }
-
-            #headerFoodCarousel .container-fluid .controls {
-                height: 50px;
-                color: #fff !important;
-                bottom: 0px !important;
-
-
-            }
-
-            #headerFoodCarousel .carousel-control-next,
-            #headerFoodCarousel .carousel-control-prev {
-                width: 20% !important;
-                background-color: transparent !important;
-                border: 1px solid transparent !important;
-            }
-
-            #headerFoodCarousel div.image {
-
-                top: 330px;
-            }
-
-            div.image img {
-                width: 75%
-            }
-
-            div.about-img img {
-                position: relative;
-                right: 0px;
-                top: 0
-            }
-
-
-            .ourprogres .main-container {
-                flex-wrap: wrap;
-            }
-        }
-
-        header .main-content {
-            height: 100%
-        }
-
-        @media(min-width:768px) and (max-width:992px) {
-
-            #headerFoodCarousel div.image {
-
-                top: 330px;
-                right: -40px;
-
-            }
-
-            #headerFoodCarousel .container-fluid .controls {
-                height: 60px;
-                position: absolute !important;
-                bottom: 80px !important;
-                left: 40px
-            }
-
-            #headerFoodCarousel .carousel-control-next,
-            #headerFoodCarousel .carousel-control-prev {
-                width: 46% !important;
-                /* border: 1px solid transparent !important; */
-
-            }
-
-            div.about-img img {
-                position: relative;
-                right: 0px;
-                top: 0
-            }
-
-            .ourprogres .main-container {
-                flex-wrap: wrap;
-            }
-
-
-
-        }
-
-        @import url('https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap');
-
-        .signature {
-            font-family: 'Mrs Saint Delafield', cursive;
-        }
-
-        .features ul {
-            gap: 20px
-        }
-
-        .progress-index img {
-            width: 60px
-        }
-
-        .progress-index {
-            margin-bottom: 5px;
-        }
-
-        .ourprogres .progress-banner img {
-            max-width: 130px;
-        }
-
-        .ourprogres .progress-banner {
-            background-image: url("./assets/imgs/Bakgrounds/ttten-1.png");
-            background-attachment: fixed;
-            background-size: cover;
-        }
-
-
-        * {
-            box-sizing: border-box !important;
-        }
-
-        .overlay {
-            background-color: rgba(0, 0, 0, 0.4);
-            z-index: 1;
-        }
-
-        .getinTouch {
-            background-image: url("./assets/imgs/otherimgs/bg-img-1.jpg");
-            background-size: cover;
-            padding-top: 100px;
-        }
-
-        .getinTouch .main-content {
-            z-index: 2;
-            height: 500px;
-        }
-
-        .getinTouch .main-content .ourvideo {
-            background-color: transparent;
-        }
-
-        .progress-banner .element {
-            grid-template-columns: 100px auto repeat(1, minmax(max-content, 1fr)) 50px;
-            /* grid-auto-columns: repeat(4, min-content); */
-            grid-template-rows: auto;
-            gap: 10px;
-            position: relative;
-        }
-
-        hr {
-            display: inline-block;
-            width: 100%;
-        }
-
-        .progress-banner .element img {
-            border-radius: 100%;
-        }
-
-        .ourMenu .progress-banner {
-            position: relative;
-        }
-
-        .progress-banner p.desc {
-            /* padding-left: 6.8rem !important; */
-            /* margin-left: 3rem; */
-            position: absolute;
-            bottom: -10px;
-            left: 90px;
-        }
-
-        .reservation .main-content {
-            background: #222 url("./assets/imgs/otherimgs/form-bg-2.jpg");
-            background-size: cover;
-            position: relative;
-            bottom: -80px;
-        }
-
-        .statistics {
-            background: #222 url("./assets/imgs/Bakgrounds/res-bg-imge.png");
-            background-size: cover;
-            padding-top: 150px;
-            padding-bottom: 50px;
-        }
-
-        .ourprogres .main-container {
-            color: #fff !important
-        }
-
-
-
-        footer .footer-card {
-            background-image: url("./assets/imgs/Bakgrounds/ft-bg-1.png");
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: 20% 10%;
-        }
-
-        @media (max-width: 768px) {
-            #teamCarousel .carousel-inner .carousel-item>div {
-                display: none;
-            }
-
-            #teamCarousel .carousel-inner .carousel-item>div:first-child {
-                display: block;
-            }
-
-            #teamCarousel .carousel-item {
-                left: 30px
-            }
-
-            footer .footer-card {
-                background-image: url("./assets/imgs/Bakgrounds/ft-bg-1.png");
-
-                background-size: contain;
-                background-repeat: repeat;
-                background-position: 20% 0%;
-            }
-        }
-
-        #teamCarousel .carousel-inner .carousel-item.active,
-        #teamCarousel .carousel-inner .carousel-item-start,
-        #teamCarousel .carousel-inner .carousel-item-next,
-        #teamCarousel .carousel-inner .carousel-item-prev {
-            display: flex;
-
-        }
-
-        #teamCarousel .carousel-inner .carousel-item {
-            gap: 10px;
-            overflow: hidden;
-
-        }
-
-        #teamCarousel .carousel-inner .carousel-item>div {
-            overflow: hidden;
-        }
-
-
-        @media (min-width: 768px) {
-
-            #teamCarousel .carousel-inner .carousel-item-right.active,
-            #teamCarousel .carousel-inner .carousel-item-next,
-            #teamCarousel .carousel-item-next:not(.carousel-item-start) {
-                transform: translateX(25%) !important;
-            }
-
-            #teamCarousel .carousel-inner .carousel-item-left.active,
-            #teamCarousel .carousel-item-prev:not(.carousel-item-end),
-            #teamCarousel .active.carousel-item-start,
-            #teamCarousel .carousel-item-prev:not(.carousel-item-end) {
-                transform: translateX(-25%) !important;
-            }
-
-            #teamCarousel .carousel-item-next.carousel-item-start,
-            #teamCarousel .active.carousel-item-end {
-                transform: translateX(0) !important;
-            }
-
-            #teamCarousel .carousel-inner .carousel-item-prev,
-            #teamCarousel .carousel-item-prev:not(.carousel-item-end) {
-                transform: translateX(-25%) !important;
-            }
-
-
-        }
-
-        .location {
-            position: relative;
-        }
-
-        .location .overlay {
-            height: 100%;
-            width: 100%;
-            top: 0;
-            left: 0;
-            position: absolute;
-            background: url("./assets/imgs/Bakgrounds/about-il-1.png");
-            background-position: 39vw 6vh;
-            background-repeat: no-repeat;
-            background-size: 62% auto;
-            opacity: 0.16;
-            z-index: 1;
-        }
-
-        .location .main-content {
-
-            width: 100%;
-            height: 100%;
-            z-index: 3;
-            position: relative;
-        }
-
-        .location .map {
-            gap: 170px;
-            margin-top: -50px
-        }
-
-        .location .map button {
-            background-color: transparent;
-            color: #c59d5f;
-            font-size: 30px;
-            width: 30px;
-            display: inline-block;
-            margin-bottom: 50px;
-            border: none;
-            outline: none;
-        }
-
-        .popover {
-            /* margin-left: -70px !important; */
-        }
-
-        .Blogs .blog {
-            background: #222 url("./assets/imgs/blogs/r-blog-10-1-1.jpg");
-            background-size: cover;
-            height: 350px;
-            border: none
-        }
-
-        .Blogs .blog .card-body .content {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            padding: 5px;
-            color: #fff !important;
-            position: relative;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: 3;
-        }
-
-        .Blogs .blog {
-            position: relative;
-        }
-
-        .Blogs .blog .overlay {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            border-radius: 5px;
-            top: 0;
-            left: 0;
-            background-color: rgba(0, 0, 0, 0.4);
-            z-index: 1;
-        }
-
-        .Blogs .blog .card-body {
-            padding: 15px !important
-        }
-
-        .Blogs .blog .card-body span {
-            background-color: #c59d5f;
-            text-align: center;
-            padding: 5px;
-            display: inline-block;
-            width: 150px;
-            border-radius: 10px;
-        }
-
-        footer ul {
-            gap: 30px;
-        }
-
-        footer .logo {
-            margin-bottom: -40px;
-        }
-
-        footer .links ul {
-            display: flex;
-            flex-direction: column;
-            gap: 20px !important;
-        }
-
-        footer .latest-blog img {
-            max-width: 120px !important;
-            /* height: 80px; */
-        }
-
-        .FAQ #accordionFlushExample {
-            gap: 20px;
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            justify-content: center;
-        }
-
-        .FAQ .main-content {
-            min-height: 400px
-        }
-
-        .accordion-header button,
-        .accordion-collapse,
-        .accordion-button:not(.collapsed) {
-            background-color: #222;
-            color: #fff;
-            border: 1px solid #c59d5f
-        }
-
-        .accordion-header button:focus {
-            border: 1px solid #c59d5f
-        }
-
-        .accordion-button::after {
-
-            background-image: url("./assets/imgs/icons/down-arrow.png");
-            transform: none !important;
-
-        }
-
-        button:not(.collapsed)::after {
-            background-image: url("./assets/imgs/icons/up-arrows.png") !important;
-            transform: none !important;
-        }
-
-        /* 
-        button:not(.collapsed)::after {
-            background-image: var(--bs-accordion-btn-active-icon);
-            transform: var(--bs-accordion-btn-icon-transform);
-        } */
-
-        .testimonial {
-            height: 800px;
-        }
-
-        .testimonial .carousel-caption {
-            position: relative
-        }
-    </style>
 </head>
 
 <body>
     <!--the header of the page that contain navbar and slider-->
     <header>
-        <div class="navbar d-flex bg-dark row m-0 p-0 ps-4 pe-4">
+        <div class="ourmain-nav navbar d-flex row m-0 p-0 ps-md-1 pe-md-1 ps-xl-4 pe-xl-4">
             <!--navbar-->
-            <nav class="navbar navbar-expand-lg bg-dark p-0 text-bg col-12 col-lg-9">
-                <div class="container-fluid d-flex justify-content-between row m-0">
-                    <h1 class="col-2">
+            <nav class="left-nav navbar navbar-expand-lg p-0 text-bg col-12 col-lg-9">
+                <div class="container-fluid d-flex justify-content-between row m-0 p-0">
+                    <h1 class="col-2 mb-0">
                         <a class="navbar-brand logo" href="#">
                             <img src="./assets/imgs/logo-2.png" alt="logo">
                         </a>
@@ -706,47 +48,49 @@
                         <span></span>
                     </button>
                     <div class="col-lg-8 col-xl-9 collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 offset-xl-2 offset-xxl-3">
+                        <ul class="navbar-nav ps-3 ps-md-0 desktop-nav me-auto mb-2 mb-lg-0 w-100">
 
-                            <li class="nav-item dropdown me-xxl-2">
+                            <li class="nav-item dropdown me-xl-2">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                     aria-expanded="false">
                                     Home
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="nav-link" href="#testimonial">testmonials</a>
+                                    </li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <li><a class="nav-link" href="#FAQ">FAQ</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="nav-link" href="#">blog</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#BookATable">Book A Table</a></li>
                                 </ul>
                             </li>
 
-                            <li class="nav-item   me-xxl-2">
+                            <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="#">About us</a>
                             </li>
-                            <li class="nav-item me-xxl-2">
+                            <li class="nav-item">
                                 <a class="nav-link" href="#">our menus</a>
                             </li>
 
-                            <li class="nav-item me-xxl-2">
+                            <li class="nav-item">
                                 <a class="nav-link" href="#">team</a>
                             </li>
-                            <li class="nav-item me-xxl-2">
-                                <a class="nav-link" href="#">testmonials</a>
-                            </li>
-                            <li class="nav-item me-xxl-2">
-                                <a class="nav-link" href="#">blog</a>
-                            </li>
+
                             <li class="nav-item">
                                 <a class="nav-link" href="#">contact us</a>
                             </li>
+                            <li class="nav-item search d-none d-lg-flex"><i class="fa-solid fa-magnifying-glass"></i>
+                            </li>
                         </ul>
-                        <form class="mb-2 d-flex d-lg-none" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success" type="submit">Search</button>
-                        </form>
+
                     </div>
                 </div>
             </nav>
@@ -869,15 +213,16 @@
                         </div>
                     </div>
                 </div>
-                <button type="button" class="rounded-0 col-7 btn btn-warning p-2 text-center border-0">
-                    <a class="d-flex text-light justify-content-center text-decoration-none" href="#">Book A Table</a>
+                <button type="button" class="main-button rounded-0 col-7 btn text-center border-0">
+                    <a class="d-flex text-light justify-content-center text-decoration-none" href="#">Book A
+                        Table</a>
                 </button>
 
             </div>
 
         </div>
         <!--Create our food header carousel-->
-        <div id="headerFoodCarousel" class="h-100 bg-dark text-light carousel carousel-dark slide">
+        <div id="headerFoodCarousel" class="h-100 text-light carousel carousel-dark slide">
             <div
                 class="container-fluid pb-2 pt-2 pt-xlg-5 pb-xlg-5 ps-2 pe-2 ps-xlg-5 pe-xlg-1  h-100 row m-auto justify-content-between align-items-center">
                 <div class="carousel-indicators d-none d-xl-block col-1 order-0">
@@ -2175,34 +1520,7 @@
     </section>
     <!--End dishes Modals-->
 
-    <!--cookie-->
-    <div id="cookie-notice" class="w-100 bg-dark text-white pt-3 px-4 pb-1 position-fixed"
-        style="z-index: 1000; bottom: 0;">
 
-        <div class="container p-2">
-
-            <div class="row">
-
-                <div class="col-sm-8 col-md-9">
-
-                    <p class="p-2">This website uses cookies so that we can provide you with the best website
-                        experience. By
-                        clicking “I Accept” you acknowledge the use of cookies and to our <a href="#"><u>Privacy
-                                Policy</u></a>.</p>
-
-                </div>
-
-                <div class="col-sm-4 col-md-3">
-
-                    <a class="i-accept btn btn-warning m-2">I Accept</a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
 
     <!--loader-->
     <div id="loader-wrapper">
@@ -2219,7 +1537,28 @@
         integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
         crossorigin="anonymous"></script>
 
-    <script src="./script.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+        $(function () {
+            let navbar = $(".ourmain-nav");
+            let sticky = (navbar[0]).offsetHeight;
+            console.log(navbar);
+            console.log(sticky);
+            window.onscroll = function () {
+                stickyNav();
+                console.log(sticky);
+            };
+
+            function stickyNav() {
+                if (window.pageYOffset >= sticky) {
+                    navbar.addClass("sticky");
+                } else {
+                    navbar.removeClass("sticky");
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
