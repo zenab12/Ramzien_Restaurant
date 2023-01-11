@@ -561,6 +561,7 @@
             background: #222 url("./assets/imgs/blogs/r-blog-10-1-1.jpg");
             background-size: cover;
             height: 350px;
+            border: none
         }
 
         .Blogs .blog .card-body .content {
@@ -587,7 +588,7 @@
             border-radius: 5px;
             top: 0;
             left: 0;
-            background-color: rgba(0, 0, 0, 0.8);
+            background-color: rgba(0, 0, 0, 0.4);
             z-index: 1;
         }
 
@@ -1506,7 +1507,7 @@
     </section>
 
     <!--Blog Section-->
-    <section class="Blogs p-5">
+    <section class="Blogs bg-black p-5">
         <h2 class="text-center pt-5">Our Blog
 
         </h2>
@@ -1789,11 +1790,10 @@
     <!--End dishes Modals-->
 
 
-    <div id="loader-wrapper">
-        <div class="loader"></div>
-    </div>
 
-    <!-- <div id="cookie-notice" class="w-100 bg-dark text-white pt-3 px-4 pb-1 position-fixed"
+
+    <!--cookie-->
+    <div id="cookie-notice" class="w-100 bg-dark text-white pt-3 px-4 pb-1 position-fixed"
         style="z-index: 1000; bottom: 0;">
 
         <div class="container p-2">
@@ -1803,8 +1803,9 @@
                 <div class="col-sm-8 col-md-9">
 
                     <p class="p-2">This website uses cookies so that we can provide you with the best website
-                        experience. By clicking “I Accept” you acknowledge the use of cookies and to our <a
-                            href="#"><u>Privacy Policy</u></a>.</p>
+                        experience. By
+                        clicking “I Accept” you acknowledge the use of cookies and to our <a href="#"><u>Privacy
+                                Policy</u></a>.</p>
 
                 </div>
 
@@ -1818,7 +1819,13 @@
 
         </div>
 
-    </div> -->
+    </div>
+
+    <!--loader-->
+    <div id="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
 
 
     <!--[if IE]><div class="w-100 text-center bg-dark text-white pt-3 px-4 pb-1 position-fixed" style="z-index: 1000; bottom: 0;"><p onClick="parentNode.remove()">Please use a modern browser for a better browsing experience. <span class="float-right">X</span></p></div><![endif]-->
@@ -1835,15 +1842,6 @@
         crossorigin="anonymous"></script>
 
     <script src="./script.js"></script>
-    <script>
-        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
-
-        const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
-        const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
-
-
-    </script>
 </body>
 
 </html>

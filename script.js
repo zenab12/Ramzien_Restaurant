@@ -28,9 +28,29 @@ $(function () {
   $(window).on("load", function () {
     $("#loader-wrapper").fadeOut(700);
   });
-  // let pop = $(".pop");
-  // pop.click(function () {
-  //   $(this).popover();
-  //   console.log($(this));
-  // });
+  const tooltipTriggerList = document.querySelectorAll(
+    '[data-bs-toggle="tooltip"]'
+  );
+  const tooltipList = [...tooltipTriggerList].map(
+    (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+  );
+
+  const popoverTriggerList = document.querySelectorAll(
+    '[data-bs-toggle="popover"]'
+  );
+  const popoverList = [...popoverTriggerList].map(
+    (popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl)
+  );
+
+  $(".i-accept").on("click", function () {
+    if (localStorage.noshow !== "1") {
+      $("#cookie-notice").addClass("d-none");
+
+      localStorage.noshow = "1";
+    }
+  });
+
+  if (localStorage.noshow == "1") {
+    $("#cookie-notice").addClass("d-none");
+  }
 });
