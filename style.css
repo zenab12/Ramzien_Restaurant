@@ -319,7 +319,7 @@ button.main-button a::after {
 
 button.main-button a:hover::after,
 button.main-button a:hover::before {
-  border-width: 72px 290.5px;
+  border-width: 72px 400.5px;
 }
 
 button.btn-close {
