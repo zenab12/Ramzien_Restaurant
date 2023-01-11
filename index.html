@@ -643,7 +643,7 @@
         }
 
         .FAQ .main-content {
-            height: 400px
+            min-height: 400px
         }
 
         .accordion-header button,
@@ -675,6 +675,14 @@
             background-image: var(--bs-accordion-btn-active-icon);
             transform: var(--bs-accordion-btn-icon-transform);
         } */
+
+        .testimonial {
+            height: 800px;
+        }
+
+        .testimonial .carousel-caption {
+            position: relative
+        }
     </style>
 </head>
 
@@ -1703,12 +1711,74 @@
     </section>
 
 
-
+    <!--testimonial section-->
+    <section class="testimonial bg-dark">
+        <h2 class="text-center pt-5">Our Testimonials</h2>
+        <h3 class="text-center pt-2">
+            What Customer Says
+        </h3>
+        <span class="seperator"></span>
+        <div id="testimonialCarousel" class="container carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active row m-auto">
+                    <div
+                        class="carousel-caption row col-10 d-flex flex-column flex-lg-row justify-content-center justify-content-lg-start g-2 g-lg-5 align-items-center">
+                        <div class="img col-8 col-md-6 col-lg-3">
+                            <img src="./assets/imgs/chiefs/team-2-1-1.jpg" class="img-fluid" alt="">
+                            <div class="number">99</div>
+                        </div>
+                        <div class="col-12 col-md-8 col-lg-8 feedback">
+                            <blockquote class="text-start">
+                                " Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto placeat
+                                praesentium maxime nulla consequuntur eaque necessitatibus ut aut illum inventore
+                                distinctio ipsam eveniet ratione quis eius unde quasi, sequi iste.
+                                "
+                            </blockquote>
+                            <h5 class="name text-start">Zienab Muhammad</h5>
+                            <p class="job">Architecture</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Second slide label</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="..." class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
 
 
 
     <!--FAQ section-->
-    <section class="p-5 FAQ bg-dark">
+    <section class="p-5 FAQ bg-black">
         <div class="container row m-auto d-flex justify-content-between">
             <div class="main-content row col-12 col-md-12 col-lg-6 col-xl-5">
                 <h2 class="text-light">Frequently Ask Questions</h2>
