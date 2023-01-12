@@ -32,20 +32,8 @@ hr {
   color: var(--hr-color);
 }
 a {
-  width: 100%;
-  height: 100%;
-  margin: 0px;
-  overflow: hidden;
-  display: inline-block !important;
-  text-align: center;
-  font-weight: 600;
-  transition: var(--transition-btn);
-  text-transform: uppercase;
-  border-radius: 0px !important;
   color: var(--main-light);
   text-decoration: none;
-  font-family: var(--primary-font-family);
-  overflow: hidden;
 }
 
 header {
@@ -131,7 +119,7 @@ header {
 }
 
 #navbarSupportedContent ul.navbar-nav li > a::before,
-.nav-details h2::before {
+.nav-details h2:not(:first-of-type)::before {
   background-image: -webkit-linear-gradient(
     right,
     var(--nav-transparent) 0,
@@ -153,14 +141,14 @@ header {
   color: var(--main-theme-color);
 }
 #navbarSupportedContent ul.navbar-nav li > a:hover::before,
-.nav-details h2::before {
+.nav-details h2:not(:first-of-type)::before {
   margin-bottom: 0;
   visibility: visible;
   opacity: 1;
   width: 55px;
 }
 
-.nav-details h2::before {
+.nav-details h2:not(:first-of-type)::before {
   left: 4px;
   width: 100px;
 }
@@ -253,7 +241,7 @@ ul.dropdown-menu li:hover > a::after {
   right: 0;
   top: 0;
   height: 100%;
-  width: 0.5px;
+  width: 1px;
   background-color: var(--hr-color);
 }
 
@@ -289,6 +277,16 @@ button.main-button a {
   font-size: 1rem;
   letter-spacing: 0.5px;
   padding: 5px;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  overflow: hidden;
+  display: inline-block !important;
+  text-align: center;
+  font-weight: 600;
+  transition: var(--transition-btn);
+  text-transform: uppercase;
+  border-radius: 0px !important;
 }
 
 button.main-button a::before,
@@ -323,7 +321,7 @@ button.main-button a:hover::before {
 }
 
 button.btn-close {
-  font-size: 1.2rem;
+  font-size: 2rem;
 }
 
 .nav-details h3 {
@@ -353,7 +351,7 @@ button.btn-close {
   color: var(--main-light);
 }
 
-.nav-details a {
+.nav-details form a {
   font-size: 0.9rem;
   padding: 1px;
   overflow: clip;
@@ -1013,5 +1011,9 @@ button:not(.collapsed)::after {
   }
   .logo img {
     width: 100px;
+  }
+
+  .left-nav::after {
+    height: 0%;
   }
 }
