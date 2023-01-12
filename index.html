@@ -25,6 +25,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
     <link rel="icon" href="./assets/imgs/logo-2.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
@@ -40,7 +41,7 @@
                             <img src="./assets/imgs/logo-2.png" alt="logo">
                         </a>
                     </h1>
-                    <button class="col-4 col-md-2 navbar-toggler burger-menu mobile_menu" type="button"
+                    <button class="col-3 pe-2 pe-md-0 col-md-2 navbar-toggler burger-menu mobile_menu" type="button"
                         data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span></span>
@@ -104,22 +105,22 @@
                     <span></span>
                 </button>
 
-                <div class="w-50 nav-details offcanvas offcanvas-end bg-black text-light overflow-auto p-2"
-                    tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class=" nav-details offcanvas offcanvas-end text-light overflow-auto p-2 ps-0 " tabindex="-1"
+                    id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                     <button type="button"
-                        class="btn-close btn-close-white d-flex align-self-end m-3 link-light text-light btn-light"
+                        class="btn-close btn-close-white d-flex align-self-end m-3 ms-0 link-light text-light btn-light"
                         data-bs-dismiss="offcanvas" aria-label="Close">
                     </button>
 
-                    <div class="offcanvas-header flex-column justify-content-start  ms-5 ps-5 pt-3 pe-5">
-                        <h2 class="text-center pb-2 offcanvas-title" id="offcanvasRightLabel">
+                    <div class="offcanvas-header flex-column justify-content-start  ms-3 ps-5 pt-3 pe-5">
+                        <h2 class="logo text-center pb-2 offcanvas-title" id="offcanvasRightLabel">
                             <a href="#"><img src="./assets/imgs/logo-2.png" alt="our logo"></a>
                         </h2>
                         <h3 class="">Order healthy and fresh food any time, Enjoy an exceptional journey of taste.
                         </h3>
                     </div>
 
-                    <div class="offcanvas-body overflow-visible ms-5  ps-5 pt-3 pe-5">
+                    <div class="offcanvas-body overflow-visible ms-3 ps-5 pt-3 pe-5">
 
                         <h2 class="pb-2">
                             Contact Info
@@ -212,7 +213,7 @@
                         </div>
                     </div>
                 </div>
-                <button type="button" class="main-button rounded-0 col-7 btn text-center border-0">
+                <button type="button" class="main-button col-7 col-xl-6 btn">
                     <a class="d-flex text-light justify-content-center text-decoration-none" href="#">Book A
                         Table</a>
                 </button>
@@ -236,11 +237,11 @@
 
                 <div class="main-content col-12 col-lg-11 offset-lg-1 order-1">
                     <div class="carousel-inner">
-                        <div class="carousel-item active row" data-bs-interval="10000">
+                        <div class="carousel-item active row" data-index="01" data-bs-interval="10000">
 
                             <div
-                                class="carousel-caption d-inline-flex flex-column justify-content-center justify-content-md-between align-items-center align-items-md-start  col-12 col-md-8 col-lg-5 ">
-                                <h2>GOod Food Made Easy</h2>
+                                class="animate__animated animate__fadeInLeft carousel-caption d-inline-flex row flex-column justify-content-center justify-content-md-between align-items-center align-items-md-start  col-12 col-md-8 col-lg-6 ps-0 ">
+                                <h2>Good Food Made Easy</h2>
                                 <h3>Are you Hungry ?</h3>
                                 <p class="text-center text-md-start">Lorem ipsum dolor sit amet consectetur adipisicing
                                     elit. Ex
@@ -251,21 +252,22 @@
                                     voluptatibus
                                     eaque excepturi quisquam?.</p>
                                 <button type="button"
-                                    class="btn btn-warning w-50 w-md-25 border-outline-none p-2 text-center text-light">Learn
-                                    More</button>
+                                    class="main-button btn col-4 col-md-5 col-xl-4 border-outline-none">
+                                    <a class="ps-4" href="#">Learn
+                                        More</a></button>
                             </div>
 
                             <div
-                                class="image d-inline-flex flex-column align-items-center justify-content-center justify-content-lg-center align-items-lg-end col-12 mt-4 mt-md-0 col-md-6">
+                                class="animate__animated animate__fadeInRight   image d-inline-flex flex-column align-items-center justify-content-center justify-content-lg-center align-items-lg-end col-12 mt-4 mt-md-0 col-md-6">
                                 <p class="ind text-center d-md-none">01</p>
                                 <img src="./assets/imgs/dishes/chicken-grill2.png" alt="...">
                             </div>
 
                         </div>
-                        <div class="carousel-item row" data-bs-interval="2000">
+                        <div class="carousel-item row" data-index="02" data-bs-interval="2000">
 
                             <div
-                                class="carousel-caption d-inline-flex flex-column justify-content-center justify-content-md-between align-items-center align-items-md-start  col-12 col-md-8 col-lg-5">
+                                class="animate__animated animate__fadeInLeft carousel-caption d-inline-flex flex-column justify-content-center justify-content-md-between align-items-center align-items-md-start  col-12 col-md-8 col-lg-6 ps-0 ">
                                 <h2>special dinner for you</h2>
                                 <h3>special dinner for you</h3>
                                 <p class="text-center text-md-start">Lorem ipsum dolor sit amet consectetur adipisicing
@@ -275,21 +277,22 @@
                                     ipsa illum aspernatur iste magni atque itaque id quod voluptatibus eaque excepturi
                                     quisquam?.</p>
                                 <button type="button"
-                                    class="btn btn-warning w-50 w-md-25 border-outline-none p-2 text-center text-light">Learn
-                                    More</button>
+                                    class="main-button btn col-4 col-md-5 col-xl-4 border-outline-none">
+                                    <a class="ps-4" href="#">Learn
+                                        More</a></button>
 
                             </div>
                             <div
-                                class="image d-inline-flex flex-column align-items-center justify-content-center align-items-md-end col-12 mt-4 mt-md-0 col-md-6">
+                                class="animate__animated animate__fadeInRight image d-inline-flex flex-column align-items-center justify-content-center align-items-md-end col-12 mt-4 mt-md-0 col-md-6">
                                 <p class="ind text-center d-md-none">02</p>
 
                                 <img src="./assets/imgs/dishes/food-3-1.png" alt="...">
                             </div>
 
                         </div>
-                        <div class="carousel-item row">
+                        <div class="carousel-item  row" data-index="03">
                             <div
-                                class="carousel-caption d-inline-flex flex-column justify-content-center justify-content-md-between align-items-center align-items-md-start col-12 col-md-8 col-lg-5">
+                                class="animate__animated animate__fadeInLeft carousel-caption d-inline-flex flex-column justify-content-center justify-content-md-between align-items-center align-items-md-start col-12 col-md-8 col-lg-6 ps-0 ">
                                 <h2>Tastes Like a Paradise</h2>
                                 <h3>Today special menu</h3>
                                 <p class="text-center text-md-start">Lorem ipsum dolor sit amet consectetur adipisicing
@@ -299,12 +302,13 @@
                                     ipsa illum aspernatur iste magni atque itaque id quod voluptatibus eaque excepturi
                                     quisquam?.</p>
                                 <button type="button"
-                                    class="btn btn-warning w-50 w-md-25 border-outline-none p-2 text-center text-light">Learn
-                                    More</button>
+                                    class="main-button btn col-4 col-md-5 col-xl-4 border-outline-none">
+                                    <a class="ps-4" href="#">Learn
+                                        More</a></button>
 
                             </div>
                             <div
-                                class="image d-inline-flex flex-column align-items-center justify-content-center align-items-md-end col-12 mt-4 mt-md-0 col-md-6">
+                                class="animate__animated animate__fadeInRight    image d-inline-flex flex-column align-items-center justify-content-center align-items-md-end col-12 mt-4 mt-md-0 col-md-6">
                                 <p class="ind text-center d-md-none">03</p>
                                 <img src="./assets/imgs/dishes/italian-food.png" alt="...">
                             </div>
@@ -319,9 +323,9 @@
                     class="controls offset-0 offset-lg-1  order-2 col-12 col-md-7 col-lg-6 row d-flex justify-content-between g-lg-3 align-content-center flex-row">
 
 
-                    <button class="carousel-control-prev col-6" type="button" data-bs-target="#headerFoodCarousel"
+                    <button class="carousel-control-prev col-5" type="button" data-bs-target="#headerFoodCarousel"
                         data-bs-slide="prev">
-                        <div class="row g-lg-3 d-none d-md-flex p-1">
+                        <div class="row  d-none d-md-flex p-1">
                             <div class="col-md-4 col-lg-3">
                                 <img src="./assets/imgs/dishes/chicken-grill2.png" class="img-fluid mt-1 rounded-start"
                                     alt="...">
@@ -338,10 +342,10 @@
                         <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Next</span> -->
                     </button>
-
-                    <button class="carousel-control-next col-6" type="button" data-bs-target="#headerFoodCarousel"
+                    <span class="index col-1">01</span>
+                    <button class="carousel-control-next col-5" type="button" data-bs-target="#headerFoodCarousel"
                         data-bs-slide="next">
-                        <div class="row g-lg-3 d-none d-md-flex p-1">
+                        <div class="row d-none d-md-flex p-1">
                             <div class="col-md-4 col-lg-3">
                                 <img src="./assets/imgs/dishes/chicken-grill2.png" class="img-fluid mt-1 rounded-start"
                                     alt="...">
@@ -1539,24 +1543,7 @@
     <script src="script.js"></script>
 
     <script>
-        $(function () {
-            let navbar = $(".ourmain-nav");
-            let sticky = (navbar[0]).offsetHeight;
-            console.log(navbar);
-            console.log(sticky);
-            window.onscroll = function () {
-                stickyNav();
-                console.log(sticky);
-            };
 
-            function stickyNav() {
-                if (window.pageYOffset >= sticky) {
-                    navbar.addClass("sticky");
-                } else {
-                    navbar.removeClass("sticky");
-                }
-            }
-        });
     </script>
 </body>
 
