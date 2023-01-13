@@ -476,7 +476,7 @@ h3 {
 
 #headerFoodCarousel h2,
 #headerFoodCarousel h3,
-#headerFoodCarousel p,
+#headerFoodCarousel .carousel-item p,
 #headerFoodCarousel .carousel-item button {
   transform-origin: 0% 0% 0px;
   opacity: 0;
@@ -505,7 +505,7 @@ h3 {
   transition-delay: 2s;
 }
 
-#headerFoodCarousel p {
+#headerFoodCarousel .carousel-item p {
   font-family: "Nunito", sans-serif;
   color: var(--typography-color);
   font-size: 1rem;
@@ -613,16 +613,107 @@ carousel-fade .carousel-inner .item {
 #headerFoodCarousel .carousel-control-prev {
   /* width: 40% !important; */
   border-radius: 60px !important;
-  position: relative !important;
+  /* position: relative !important; */
   border: 1px solid #c59d5f !important;
   background-color: #000 !important;
   text-align: left !important;
   color: #c59d5f !important;
-  width: auto !important;
-  /* padding-top: 15px !important; */
+  width: unset !important;
+  top: unset;
+  max-width: 41%;
 }
+#headerFoodCarousel div.image {
+  position: absolute;
+  top: 20px;
+  z-index: 100;
+  right: -20px;
+}
+
+div.image img {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+div.image::before {
+  position: absolute;
+  right: -10px;
+  top: -40px;
+  content: "";
+  display: block;
+  padding: 50px;
+  background: url("./assets/imgs/Bakgrounds/leaf-circle2.png");
+  background-size: cover;
+  width: 105%;
+  height: 110%;
+  z-index: 0;
+  animation: rotation 15s infinite linear;
+}
+
+@keyframes rotation {
+  to {
+    transform: rotate(360);
+  }
+}
+
+#headerFoodCarousel {
+  overflow: hidden;
+}
+
+#headerFoodCarousel .carousel-inner {
+  margin: 0px;
+  padding: 0px;
+  overflow: visible;
+}
+
+#headerFoodCarousel .carousel-inner::before {
+  position: absolute;
+  display: block;
+  content: "";
+  z-index: 1;
+  top: 0%;
+  right: -50px;
+  width: 200px;
+  height: 200px;
+  background: url("./assets/imgs/Bakgrounds/arrow-leafs.png");
+  background-size: contain;
+}
+
+#headerFoodCarousel .carousel-inner::after {
+  position: absolute;
+  display: block;
+  content: "";
+  z-index: 0;
+  top: 75%;
+  left: -110px;
+  width: 200px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background: url("./assets/imgs/Bakgrounds/leaf-3.png") no-repeat;
+  background-size: contain;
+}
+
+#headerFoodCarousel .carousel-control-next > div,
+#headerFoodCarousel .carousel-control-prev > div {
+  padding-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  gap: 0px !important;
+  align-items: center;
+  padding-left: 8px !important;
+  padding-bottom: 9px !important;
+}
+
+#headerFoodCarousel .controls {
+  height: 50px;
+  color: #fff !important;
+  bottom: 0px !important;
+  position: relative !important;
+  top: 78%;
+}
+
 #headerFoodCarousel .controls span {
-  /* width: 100%; */
+  width: 100%;
   position: relative;
   font-size: 2.6rem;
   text-align: center;
@@ -633,17 +724,6 @@ carousel-fade .carousel-inner .item {
 #headerFoodCarousel .controls .card-body {
   display: flex;
   align-items: center;
-}
-
-#headerFoodCarousel div.image {
-  position: absolute;
-  top: 20px;
-  z-index: 100;
-  right: -20px;
-}
-
-div.image img {
-  width: 100%;
 }
 
 .aboutus {
@@ -676,10 +756,14 @@ div.about-img img {
     position: relative !important;
   }
 
-  #headerFoodCarousel .container-fluid .controls {
-    height: 50px;
+  #headerFoodCarousel .controls {
     color: #fff !important;
     bottom: 0px !important;
+    position: relative !important;
+    top: 80%;
+    padding: 0px;
+    margin-top: 50px;
+    height: 50px !important;
   }
 
   #headerFoodCarousel .carousel-control-next,
@@ -690,11 +774,73 @@ div.about-img img {
   }
 
   #headerFoodCarousel div.image {
-    top: 330px;
+    position: relative;
+    top: 0px;
+    padding: 0px;
+    margin: 0px;
+  }
+  div.image img {
+    width: 190px;
   }
 
-  div.image img {
-    width: 75%;
+  div.image::before {
+    display: none;
+  }
+
+  #headerFoodCarousel .carousel-inner::before {
+    position: absolute;
+    display: block;
+    content: "";
+    z-index: 1;
+    top: 40%;
+    right: -50px;
+    width: 150px;
+    height: 150px;
+    background: url("./assets/imgs/Bakgrounds/arrow-leafs.png");
+    background-size: contain;
+  }
+  #headerFoodCarousel .carousel-inner::after {
+    position: absolute;
+    display: block;
+    content: "";
+    z-index: 0;
+    top: 90%;
+    left: -30px;
+    width: 150px;
+    height: 150px;
+    background-repeat: no-repeat;
+    background: url("./assets/imgs/Bakgrounds/leaf-3.png") no-repeat;
+    background-size: contain;
+  }
+
+  #headerFoodCarousel h2 {
+    font-size: 1.7rem;
+    line-height: 40px;
+    text-align: center;
+    margin: 0;
+  }
+
+  #headerFoodCarousel h3 {
+    font-size: 1.4rem;
+    text-align: center;
+    -webkit-text-stroke: 0.5px var(--main-light);
+    margin: 0;
+  }
+
+  #headerFoodCarousel .carousel-item p {
+    font-size: 0.75rem;
+    text-align: center;
+    padding: 0;
+    padding-right: 0px !important;
+  }
+
+  #headerFoodCarousel .carousel-item button {
+    margin-bottom: 0px;
+    width: 180px;
+    font-size: 15px;
+  }
+  #headerFoodCarousel .carousel-item button a {
+    font-size: 15px;
   }
 
   div.about-img img {
@@ -705,6 +851,12 @@ div.about-img img {
 
   .ourprogres .main-container {
     flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 410px) and (max-width: 767px) {
+  div.image img {
+    width: 290px;
   }
 }
 
@@ -723,6 +875,7 @@ header .main-content {
     position: absolute !important;
     bottom: 80px !important;
     left: 40px;
+    z-index: 100000 !important;
   }
 
   #headerFoodCarousel .carousel-control-next,
@@ -1146,3 +1299,25 @@ button:not(.collapsed)::after {
     height: 0%;
   }
 }
+
+@media (min-width: 767px) and (max-width: 992px) {
+  #headerFoodCarousel .carousel-inner::after {
+    position: absolute;
+    display: block;
+    content: "";
+    z-index: 0;
+    top: 75%;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    background-repeat: no-repeat;
+    background: url("./assets/imgs/Bakgrounds/leaf-3.png") no-repeat;
+    background-size: contain;
+  }
+}
+/* 
+@media (min-width: 993px) and (max-width: 1024px) {
+  #headerFoodCarousel div.image {
+    top: 200px !important;
+  }
+} */
